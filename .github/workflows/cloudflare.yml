@@ -33,9 +33,9 @@ jobs:
       - name: Publish
         uses: cloudflare/pages-action@1
         with:
+          gitHubToken: ${{ secrets.TOKEN_GITHUB }}
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          gitHubToken: ${{ secrets.TOKEN_GITHUB }}
           projectName: "julianarodriguesadv"
           directory: "out"
           branch: main
