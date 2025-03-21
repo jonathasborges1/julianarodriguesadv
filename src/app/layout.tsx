@@ -4,6 +4,7 @@ import { Montserrat } from "next/font/google";
 import { SITE_URL } from "@/lib/config";
 
 import "./globals.css";
+import { LoadingScreen } from "./components/LoadingApp/LoadingScreen";
 
 // 🔹 Configurando a fonte Montserrat
 const montserrat = Montserrat({
@@ -61,6 +62,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={montserrat.variable}>
       <body>
+        <LoadingScreen />
         {children}
 
         {/* ✅ Schema.org para LegalService (SEO) */}

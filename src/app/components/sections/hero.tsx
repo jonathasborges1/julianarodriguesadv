@@ -1,15 +1,24 @@
 "use client";
-
+import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa";
 
 export const Hero = () => {
   return (
-    <section className="relative flex items-center justify-center min-h-screen bg-gradient-to-b from-[#00274B] to-blue-900 text-white px-6 md:px-12 py-10">
+    <section className="relative flex items-center justify-center min-h-screen bg-gradient-to-b from-[#00274B] to-blue-900 text-white px-6 md:px-12 py-8">
       {/* Overlay para suavizar o fundo */}
       <div className="absolute inset-0 bg-black opacity-40"></div>
-
+      {/* <div className="relative flex justify-center max-w-5xl">
+       
+      </div> */}
       {/* Conteúdo centralizado com flexbox */}
-      <div className="relative z-10 max-w-5xl flex flex-col items-center text-center gap-8">
+      <div className="relative z-10 max-w-5xl flex flex-col items-center text-center gap-6 md:gap-10">
+        <Image
+          src="/images/logotipo-dra-juliana.png"
+          alt="Dra. Juliana Rodrigues - Advogada Trabalhista em Manaus"
+          width={100}
+          height={100}
+          className="rounded-xl shadow-lg"
+        />
         {/* Título principal */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
           <span className="inline text-[#DAA520]">Dra. Juliana Rodrigues</span>{" "}
@@ -56,9 +65,8 @@ export const Hero = () => {
           </span>
         </div>
       </div>
-
       {/* Separador em onda */}
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
+      <div className="absolute bottom-[-45] md:bottom-[0] left-0 w-full overflow-hidden leading-[0]">
         <svg
           className="relative block w-full h-[60px] md:h-[100px]"
           viewBox="0 0 1200 120"
