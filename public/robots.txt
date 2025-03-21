@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://julianarodriguesadv.pages.dev
+
+# Sitemaps
+Sitemap: https://julianarodriguesadv.pages.dev/sitemap.xml

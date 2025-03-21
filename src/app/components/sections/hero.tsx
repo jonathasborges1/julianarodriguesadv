@@ -1,11 +1,6 @@
 "use client";
 
-import dynamic from "next/dynamic";
-
-const FaWhatsapp = dynamic(
-  () => import("react-icons/fa").then((mod) => mod.FaWhatsapp),
-  { ssr: false }
-);
+import { FaWhatsapp } from "react-icons/fa";
 
 export const Hero = () => {
   return (
@@ -32,16 +27,14 @@ export const Hero = () => {
 
         {/* Botões de ação */}
         <div className="flex flex-col md:flex-row gap-4">
-          {typeof window !== "undefined" && (
-            <a
-              href="https://api.whatsapp.com/send?phone=5592982301415&utm_source=landingpage&utm_medium=hero_section"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#DAA520] text-[#00274B] px-6 py-3 rounded-full text-base sm:text-lg font-semibold shadow-lg hover:bg-[#E6B800] transition flex items-center gap-2 justify-center"
-            >
-              <FaWhatsapp className="text-2xl" /> Agende sua Consulta
-            </a>
-          )}
+          <a
+            href="https://api.whatsapp.com/send?phone=5592982301415&utm_source=landingpage&utm_medium=hero_section"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#DAA520] text-[#00274B] px-6 py-3 rounded-full text-base sm:text-lg font-semibold shadow-lg hover:bg-[#E6B800] transition flex items-center gap-2 justify-center"
+          >
+            <FaWhatsapp className="text-2xl" /> Agende sua Consulta
+          </a>
           <a
             href="#sobre"
             className="border border-yellow-400 px-6 py-3 rounded-full text-base sm:text-lg font-semibold shadow-lg hover:bg-blue-400 hover:text-blue-900 transition flex items-center justify-center"

@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true, // Evita otimização de imagens no Cloudflare Pages
   },
+  compress: true, // Gzip habilitado
 };
 
 export default nextConfig;

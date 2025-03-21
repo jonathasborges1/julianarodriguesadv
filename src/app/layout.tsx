@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 
+import { SITE_URL } from "@/lib/config";
+
 import "./globals.css";
 
 // 🔹 Configurando a fonte Montserrat
@@ -16,8 +18,12 @@ export const metadata: Metadata = {
   title: "Dra. Juliana Rodrigues - Advogada Trabalhista em Manaus",
   description:
     "Advogada trabalhista em Manaus com atendimento presencial na sede da OAB e online para todo o Brasil. Especializada em direitos trabalhistas, rescisões e ações na Justiça do Trabalho.",
+  verification: {
+    google: "-aEdvna45HfuoQzvEtZiYF0J6Q6snzapEc1lmIuTmGU",
+  },
   keywords: [
-    "advogada trabalhista Manaus",
+    "advogada trabalhista manaus",
+    "advogada manaus",
     "direito do trabalho",
     "advogado OAB Manaus",
     "rescisão trabalhista",
@@ -28,17 +34,18 @@ export const metadata: Metadata = {
     title: "Dra. Juliana Rodrigues - Advogada Trabalhista em Manaus",
     description:
       "Atendimento jurídico especializado em Direito Trabalhista para trabalhadores e empresas. Sede da OAB em Manaus e atendimento online.",
-    url: "https://julianarodriguesadv.com.br",
+    url: SITE_URL,
     siteName: "Dra. Juliana Rodrigues - Advocacia Trabalhista",
     images: [
       {
-        url: "/images/dra-juliana-rodrigues-advogada-trabalhista.jpg",
+        url: `${SITE_URL}/images/dra-juliana-rodrigues-advogada-trabalhista-manaus.jpg`,
         width: 1200,
         height: 630,
         alt: "Dra. Juliana Rodrigues - Advogada Trabalhista em Manaus",
       },
     ],
     type: "website",
+    locale: "pt_BR",
   },
   robots: {
     index: true,
@@ -48,10 +55,36 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="pt-BR" className={montserrat.variable}>
-      <body>{children}</body>
+      <body>
+        {children}
+
+        {/* ✅ Schema.org para LegalService (SEO) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LegalService",
+              name: "Dra. Juliana Rodrigues",
+              image: `${SITE_URL}/images/dra-juliana-rodrigues-advogada-trabalhista-manaus.jpg`,
+              url: SITE_URL,
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Manaus",
+                addressCountry: "BR",
+              },
+              priceRange: "Sob consulta",
+              areaServed: "BR",
+              sameAs: ["https://www.instagram.com/julianarodrigues.advogada"],
+            }),
+          }}
+        />
+      </body>
     </html>
   );
 }

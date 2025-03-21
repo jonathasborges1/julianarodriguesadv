@@ -1,7 +1,5 @@
-// import Image from "next/image";
-
-import { About as AboutSection } from "./components/sections/about";
-import { Hero as HeroSection } from "./components/sections/hero";
+import { About as AboutSection } from "@/components/sections/about";
+import { Hero as HeroSection } from "@/components/sections/hero";
 
 export default function Home() {
   return (
