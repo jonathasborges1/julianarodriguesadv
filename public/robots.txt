@@ -1,9 +1,9 @@
-# *
+# Permite que o Google rastreie tudo
 User-agent: *
 Allow: /
 
-# Host
-Host: https://julianarodriguesadv.pages.dev
+# Host principal (opcional, o Google já ignora esse campo na prática)
+Host: https://julianarodrigues.com.br
 
-# Sitemaps
-Sitemap: https://julianarodriguesadv.pages.dev/sitemap.xml
+# Sitemap para indexação correta
+Sitemap: https://julianarodrigues.com.br/sitemap.xml

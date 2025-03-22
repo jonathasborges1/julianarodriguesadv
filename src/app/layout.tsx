@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   verification: {
     google: "-aEdvna45HfuoQzvEtZiYF0J6Q6snzapEc1lmIuTmGU",
   },
+  alternates: {
+    canonical: SITE_URL,
+  },
   keywords: [
     "advogada trabalhista manaus",
     "advogada manaus",
@@ -59,6 +62,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  console.log("url Site Juliana Rodrigues Advogada em execucao ", SITE_URL);
   return (
     <html lang="pt-BR" className={montserrat.variable}>
       <body>
