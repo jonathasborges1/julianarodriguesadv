@@ -66,17 +66,23 @@ export const Hero = () => {
         </div>
       </div>
       {/* Separador em onda */}
-      <div className="absolute bottom-[-45] md:bottom-[0] left-0 w-full overflow-hidden leading-[0]">
+      <div className="absolute bottom-[-65px] md:bottom-[-60px] left-0 w-full overflow-hidden leading-[0]">
         <svg
-          className="relative block w-full h-[60px] md:h-[100px]"
+          className="relative block w-[125%] h-[60px] md:h-[100px] -ml-[12.5%]"
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
         >
           <path
-            d="M0,0V46.29c47.5,18.17,96.92,29.78,147.67,30.89,58.83,1.28,113.17-12.7,169.08-20.21C408.79,46,467.42,41.06,525,47.89,582.5,54.56,638.79,71,694.67,81.58c55.71,10.49,112.5,12.28,169.08,7.23,58.83-5.27,113.17-16.49,169.08-23.6,47.5-6.06,96.92-7.92,147.67-2.49V0Z"
+            d="M0,0V46.29c47.5,18.17,96.92,29.78,147.67,30.89,
+         58.83,1.28,113.17-12.7,169.08-20.21,
+         C408.79,46,467.42,41.06,525,47.89,
+         582.5,54.56,638.79,71,694.67,81.58,
+         750.38,92.07,807.17,93.86,864.75,88.81,
+         923.58,83.54,977.92,72.32,1033.83,65.21,
+         1081.33,59.15,1130.75,57.29,1181.5,62.72,
+         1190,63.69,1200,66,1200,66V0Z"
             fill="#fff"
-            opacity="1"
-          ></path>
+          />
         </svg>
       </div>
     </section>

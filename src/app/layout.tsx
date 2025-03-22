@@ -5,6 +5,8 @@ import { SITE_URL } from "@/lib/config";
 
 import "./globals.css";
 import { LoadingScreen } from "./components/LoadingApp/LoadingScreen";
+import { LogToBrowser } from "./components/LogToBrowser/LogToBrowser";
+import { VersionLogger } from "./components/VersionLogger/VersionLogger";
 
 // 🔹 Configurando a fonte Montserrat
 const montserrat = Montserrat({
@@ -62,11 +64,13 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  console.log("url Site Juliana Rodrigues Advogada em execucao ", SITE_URL);
   return (
     <html lang="pt-BR" className={montserrat.variable}>
       <body>
+        <LogToBrowser url={SITE_URL} />
+        <VersionLogger />
         <LoadingScreen />
+
         {children}
 
         {/* ✅ Schema.org para LegalService (SEO) */}

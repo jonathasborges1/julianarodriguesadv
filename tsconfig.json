@@ -1,19 +1,19 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "skipLibCheck": true,
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
     "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
     "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
@@ -32,11 +32,15 @@
       ]
     }
   },
+  "ts-node": {
+    "esm": true
+  },
   "include": [
     "**/*.ts",
     "**/*.tsx",
     "out/types/**/*.ts",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "scripts/**/*"
   ],
   "exclude": [
     "node_modules"

@@ -3,6 +3,8 @@
 import Image from "next/image";
 import dynamic from "next/dynamic";
 
+import { FaWhatsapp } from "react-icons/fa";
+
 // Importação dinâmica dos ícones para evitar problemas de hidratação
 const FaUniversity = dynamic(
   () => import("react-icons/fa").then((mod) => mod.FaUniversity),
@@ -48,7 +50,7 @@ export const About = () => {
           </h2>
 
           {/* Introdução */}
-          <p className="mt-6 text-lg text-gray-800 leading-relaxed text-justify">
+          <p className="mt-6 text-lg text-gray-800 leading-relaxed text-left md:text-justify">
             Com mais de <strong>10 anos de experiência</strong> no Direito
             Trabalhista, a Dra. Juliana Rodrigues se dedica à defesa dos
             direitos dos trabalhadores e empregadores, atuando com ética e
@@ -56,7 +58,7 @@ export const About = () => {
           </p>
 
           {/* Áreas de atuação */}
-          <p className="mt-4 text-lg text-gray-800 leading-relaxed text-justify">
+          <p className="mt-4 text-lg text-gray-800 leading-relaxed text-left md:text-justify">
             Sua atuação inclui <strong>processos trabalhistas em geral</strong>,
             abrangendo:
           </p>
@@ -88,7 +90,7 @@ export const About = () => {
           </ul>
 
           {/* Objetivo e Missão */}
-          <p className="mt-4 text-lg text-gray-800 leading-relaxed text-justify">
+          <p className="mt-4 text-lg text-gray-800 leading-relaxed text-left md:text-justify">
             A missão da Dra. Juliana é oferecer um{" "}
             <strong>atendimento jurídico especializado</strong>, garantindo que
             cada cliente tenha seus direitos protegidos com{" "}
@@ -96,7 +98,7 @@ export const About = () => {
           </p>
 
           {/* Destaques da Formação e Experiência */}
-          <p className="mt-6 text-lg text-gray-800 leading-relaxed text-justify">
+          <p className="mt-6 text-lg text-gray-800 leading-relaxed text-left md:text-justify">
             Formada pela <strong>Universidade UniNorte</strong>, a Dra. Juliana
             se especializou em
             <strong>
@@ -105,8 +107,8 @@ export const About = () => {
               preventiva e mediação de conflitos
             </strong>
             . Sua atuação inclui{" "}
-            <strong>atendimentos presenciais e online</strong>
-            para clientes em todo o Brasil.
+            <strong>atendimentos presenciais e online</strong> para clientes em
+            todo o Brasil.
           </p>
 
           {/* Lista de Informações com Ícones */}
@@ -152,7 +154,7 @@ export const About = () => {
               rel="noopener noreferrer"
               className="bg-[#00274B] text-white px-6 py-3 rounded-full text-base md:text-lg font-semibold shadow-lg hover:bg-blue-800 transition flex items-center gap-2 w-full md:w-fit justify-center"
             >
-              📞 Fale com a Dra. Juliana
+              <FaWhatsapp className="text-2xl" /> Fale com a Dra. Juliana
             </a>
           </div>
         </div>

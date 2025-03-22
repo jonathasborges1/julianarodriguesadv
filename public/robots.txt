@@ -1,9 +1,9 @@
-# Permite que o Google rastreie tudo
+# *
 User-agent: *
 Allow: /
 
-# Host principal (opcional, o Google já ignora esse campo na prática)
+# Host
 Host: https://julianarodrigues.com.br
 
-# Sitemap para indexação correta
+# Sitemaps
 Sitemap: https://julianarodrigues.com.br/sitemap.xml

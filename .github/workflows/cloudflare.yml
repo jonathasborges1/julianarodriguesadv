@@ -2,8 +2,7 @@ name: Deploy to CloudFlare
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
   deploy:
@@ -13,24 +12,27 @@ jobs:
       deployments: write
     name: Publish to Cloudflare Pages
     steps:
-      - name: Checkout code
+      - name: 🧾 Checkout do repositório
         uses: actions/checkout@v3
 
-      - name: Use Node.js 18
+      - name: 🟢 Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "20"
 
-      - name: Install dependencies [1]
+      - name: 📦 Instalar dependências parte 1
         run: npm install -g npm@10.2.5
 
-      - name: Install dependencies [2]
+      - name: 📦 Instalar dependências parte 2
         run: npm install --legacy-peer-deps
 
-      - name: Build worker
+      - name: 🔢 Gerar versão baseada em commits
+        run: npm run generate:version
+
+      - name: 🛠️ Build do Next.js (estático)
         run: npm run build
 
-      - name: Publish
+      - name: 🚀 Deploy no Cloudflare Pages
         uses: cloudflare/pages-action@1
         with:
           gitHubToken: ${{ secrets.TOKEN_GITHUB }}
@@ -39,4 +41,3 @@ jobs:
           projectName: "julianarodriguesadv"
           directory: "out"
           branch: main
-          wranglerVersion: "3"
