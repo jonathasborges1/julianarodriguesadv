@@ -69,7 +69,7 @@ export const Hero = () => {
         </div>
       </div>
       {/* Separador em onda */}
-      <div className="absolute bottom-[-65px] md:bottom-[-60px] left-0 w-full overflow-hidden leading-[0]">
+      <div className="absolute bottom-[-65px] md:bottom-[-75px] left-0 w-full overflow-hidden leading-[0]">
         <svg
           className="relative block w-[125%] h-[60px] md:h-[100px] -ml-[12.5%]"
           viewBox="0 0 1200 120"
