@@ -15,8 +15,10 @@ export const Hero = () => {
         <Image
           src="/images/logotipo-dra-juliana.png"
           alt="Dra. Juliana Rodrigues - Advogada Trabalhista em Manaus"
-          width={100}
-          height={100}
+          width={150}
+          height={150}
+          sizes="(max-width: 768px) 100px, 200px"
+          quality={100}
           className="rounded-xl shadow-lg"
           priority
         />
