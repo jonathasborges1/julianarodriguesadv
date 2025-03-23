@@ -18,6 +18,7 @@ export const Hero = () => {
           width={100}
           height={100}
           className="rounded-xl shadow-lg"
+          priority
         />
         {/* Título principal */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
