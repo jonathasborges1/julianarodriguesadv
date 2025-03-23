@@ -7,10 +7,18 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const baseVersion = "1.0.";
-const commitCount = execSync("git rev-list --count HEAD").toString().trim();
-const commitHash = execSync("git rev-parse --short HEAD").toString().trim();
-const version = `${baseVersion}${commitCount}`;
 
+let commitCount = "0";
+let commitHash = "undefined";
+
+try {
+  commitCount = execSync("git rev-list --count HEAD").toString().trim();
+  commitHash = execSync("git rev-parse --short HEAD").toString().trim();
+} catch (error) {
+  console.error("❌ Erro ao obter dados do Git:", error);
+}
+
+const version = `${baseVersion}${commitCount}`;
 const outputPath = resolve(__dirname, "../public/version.json");
 
 try {
@@ -26,5 +34,5 @@ try {
 
   console.log(`✅ Versão gerada: ${version} (${commitHash})`);
 } catch (error) {
-  console.error("❌ Erro ao gerar a versão do projeto:", error);
+  console.error("❌ Erro ao gerar o arquivo version.json:", error);
 }
