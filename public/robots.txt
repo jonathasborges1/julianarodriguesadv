@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://julianarodrigues.com.br
+Host: https://julianarodriguesadv.com.br
 
 # Sitemaps
-Sitemap: https://julianarodrigues.com.br/sitemap.xml
+Sitemap: https://julianarodriguesadv.com.br/sitemap.xml

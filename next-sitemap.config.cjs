@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://julianarodrigues.com.br',
+  siteUrl: 'https://julianarodriguesadv.com.br',
   generateRobotsTxt: true,
   sitemapSize: 5000,
   changefreq: 'weekly',
@@ -9,7 +9,7 @@ module.exports = {
   exclude: ['/404'],
   robotsTxtOptions: {
     additionalSitemaps: [
-      'https://julianarodrigues.com.br/sitemap.xml',
+      'https://julianarodriguesadv.com.br/sitemap.xml',
     ],
     policies: [
       {
