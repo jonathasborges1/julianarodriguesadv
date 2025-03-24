@@ -27,7 +27,7 @@ export const About = () => {
   return (
     <section
       id="sobre"
-      className="bg-gradient-to-b from-[#00274B] to-blue-900 py-20 px-6 md:px-12 flex justify-center items-center"
+      className="bg-gradient-to-b from-[#00274B] to-blue-900 py-20 px-6 md:px-12 flex flex-col justify-center items-center gap-10"
     >
       <div className="max-w-6xl flex flex-col md:flex-row items-center gap-12 bg-white p-8 shadow-xl rounded-xl">
         {/* Imagem da Dra. Juliana */}

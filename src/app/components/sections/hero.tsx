@@ -7,9 +7,7 @@ export const Hero = () => {
     <section className="relative flex items-center justify-center min-h-screen bg-gradient-to-b from-[#00274B] to-blue-900 text-white px-6 md:px-12 py-8">
       {/* Overlay para suavizar o fundo */}
       <div className="absolute inset-0 bg-black opacity-40"></div>
-      {/* <div className="relative flex justify-center max-w-5xl">
-       
-      </div> */}
+
       {/* Conteúdo centralizado com flexbox */}
       <div className="relative z-10 max-w-5xl flex flex-col items-center text-center gap-6 md:gap-10">
         <Image
