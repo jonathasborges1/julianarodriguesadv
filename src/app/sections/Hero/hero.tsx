@@ -4,8 +4,8 @@ import { FaWhatsapp } from "react-icons/fa";
 export const Hero = () => {
   return (
     <section
-      id="hero"
-      className="relative flex items-center justify-center min-h-screen bg-gradient-to-b from-[#00274B] to-blue-900 text-white px-6 md:px-12 py-8"
+      id="home"
+      className="scroll-mt-12 md:scroll-mt-0 relative flex items-center justify-center min-h-screen bg-gradient-to-b from-[#00274B] to-blue-900 text-white px-6 md:px-12 py-8"
     >
       {/* Overlay para suavizar o fundo */}
       <div className="absolute inset-0 bg-black opacity-40"></div>
@@ -31,10 +31,10 @@ export const Hero = () => {
 
         {/* Subtítulo com mensagem de impacto */}
         <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed max-w-2xl">
-          Transformando desafios em justiça, a Dra. Juliana atua com excelência
-          para proteger os direitos dos trabalhadores em Manaus e em todo o
-          Brasil. Com uma abordagem humanizada e ética, ela oferece soluções
-          estratégicas para casos de rescisões, ações trabalhistas e muito mais.
+          A Dra. Juliana defende os direitos dos trabalhadores com dedicação e
+          experiência. Atua em Manaus e em todo o Brasil, sempre com atenção,
+          ética e respeito. Auxilia em casos de rescisões, processos
+          trabalhistas e outras questões do dia a dia.
         </p>
 
         {/* Botões de ação */}

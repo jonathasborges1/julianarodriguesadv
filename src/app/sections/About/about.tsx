@@ -51,9 +51,9 @@ export const About = () => {
 
           {/* Introdução */}
           <p className="mt-6 text-md lg:text-lg text-gray-800 leading-relaxed text-left md:text-justify">
-            A Dra. Juliana Rodrigues atua no Direito Trabalhista há mais de 10
-            anos. Defende os direitos de trabalhadores e empregadores com ética
-            e compromisso.
+            Há mais de 10 anos, a Dra. Juliana Rodrigues trabalha com Direito do
+            Trabalho. Atua com ética para defender tanto trabalhadores quanto
+            empregadores.
           </p>
 
           {/* Áreas de atuação */}
@@ -89,23 +89,21 @@ export const About = () => {
 
           {/* Objetivo e Missão */}
           <p className="mt-4 text-md lg:text-lg text-left md:text-justify text-gray-800 leading-relaxed ">
-            Sua missão é oferecer atendimento jurídico claro e confiável. Cada
-            cliente é atendido com transparência, ética e foco na defesa de seus
+            Nossa missão é oferecer um atendimento claro, direto e confiável.
+            Cada cliente recebe orientação com transparência e respeito aos seus
             direitos.
           </p>
 
           {/* Destaques da Formação e Experiência */}
-          <p className="mt-6 text-md text-gray-800 leading-relaxed text-left md:text-justify">
-            Formada pela <strong>Universidade UniNorte</strong>, a Dra. Juliana
-            se especializou em
+          <p className="mt-6 text-md lg:text-lg text-gray-800 leading-relaxed text-left md:text-justify">
+            Formada pela Faculdade <strong>UniNorte</strong> e tem
+            especialização em
             <strong>
               {" "}
-              rescisões trabalhistas, ações contra empregadores, assessoria
-              preventiva e mediação de conflitos
+              rescisões trabalhistas, ações contra empresas e mediação de
+              conflitos
             </strong>
-            . Sua atuação inclui{" "}
-            <strong>atendimentos presenciais e online</strong> para clientes em
-            todo o Brasil.
+            . Atende presencialmente em Manaus e online para todo o Brasil.
           </p>
 
           {/* Lista de Informações com Ícones */}
@@ -149,7 +147,7 @@ export const About = () => {
               href="https://api.whatsapp.com/send?phone=5592982301415&utm_source=landingpage&utm_medium=about_section"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#00274B] text-white px-6 py-3 rounded-full text-base md:text-lg font-semibold shadow-lg hover:bg-blue-800 transition flex items-center gap-2 w-full md:w-fit justify-center"
+              className="bg-[#00274B] text-white px-6 py-3 rounded-full text-md md:text-lg font-semibold shadow-lg hover:bg-blue-800 transition flex items-center gap-2 w-full md:w-fit justify-center"
             >
               <FaWhatsapp className="text-2xl" /> Fale com a Dra. Juliana
             </a>

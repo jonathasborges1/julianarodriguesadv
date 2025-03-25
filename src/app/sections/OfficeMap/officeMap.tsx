@@ -1,51 +1,17 @@
-"use client";
-
-import { useState } from "react";
 import { FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
+import { GoogleMapsButton } from "@/components/GoogleMapsButton";
 
-export function OfficeMap() {
-  const [origin, setOrigin] = useState<{ lat: number; lng: number } | null>(
-    null
-  );
-
+export const OfficeMap = () => {
   const destination = {
     lat: -3.1079797,
     lng: -60.0147917,
   };
 
-  const openGoogleMaps = () => {
-    const base = "https://www.google.com/maps/dir/?api=1";
-    const dest = `&destination=${destination.lat},${destination.lng}`;
-
-    if (origin) {
-      const orig = `&origin=${origin.lat},${origin.lng}`;
-      window.open(base + orig + dest, "_blank");
-    } else {
-      window.open(base + dest, "_blank");
-    }
-  };
-
-  const requestLocation = () => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          setOrigin({
-            lat: position.coords.latitude,
-            lng: position.coords.longitude,
-          });
-        },
-        (error) => {
-          console.error("Erro ao obter localização:", error.message);
-        }
-      );
-    } else {
-      console.error("Geolocalização não suportada pelo navegador.");
-    }
-  };
-
   return (
-    <section className="relative bg-[#C8C8C8] py-16 px-4 sm:px-6 md:px-12 flex flex-col items-center">
-      {/* Mapa + título */}
+    <section
+      id="localizacao"
+      className="relative bg-[#C8C8C8] py-16 px-4 sm:px-6 md:px-12 flex flex-col items-center"
+    >
       <div className="max-w-7xl w-full flex flex-col bg-white p-6 sm:p-8 shadow-xl rounded-xl gap-8 sm:gap-10">
         <h2 className="text-3xl sm:text-3xl md:text-4xl font-bold text-gray-900 relative pb-4">
           Mapa do Escritório
@@ -61,7 +27,6 @@ export function OfficeMap() {
         </div>
       </div>
 
-      {/* Informações */}
       <div className="max-w-7xl w-full flex flex-col md:flex-row gap-8 md:gap-10 mt-10 bg-white p-6 sm:p-8 shadow-xl rounded-xl">
         {/* Endereço */}
         <div className="flex flex-col sm:flex-row flex-1 items-start gap-4">
@@ -75,18 +40,9 @@ export function OfficeMap() {
               <br />
               Manaus - AM, 69057-040
             </p>
-            <button
-              onClick={requestLocation}
-              className="hidden mt-3 bg-gray-500 text-white px-4 py-2 rounded"
-            >
-              Detectar Localização
-            </button>
-            <button
-              onClick={openGoogleMaps}
-              className="mt-3 inline-block bg-[#00274B] text-white px-5 py-2 rounded-full text-sm font-semibold shadow hover:bg-blue-800 transition"
-            >
-              Abrir no Google Maps
-            </button>
+
+            {/* Botões dinâmicos separados */}
+            <GoogleMapsButton destination={destination} />
           </div>
         </div>
 
@@ -113,4 +69,4 @@ export function OfficeMap() {
       </div>
     </section>
   );
-}
+};

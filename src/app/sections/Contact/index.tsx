@@ -38,7 +38,7 @@ export const Contact = () => {
   return (
     <section
       id="contato"
-      className="bg-zinc-900 text-white py-12 px-4 sm:px-6 md:px-10 xl:px-20"
+      className="scroll-mt-12 md:scroll-mt-8 bg-zinc-900 text-white py-12 px-4 sm:px-6 md:px-10 xl:px-20"
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-9 xl:gap-10">
         {/* Título */}
