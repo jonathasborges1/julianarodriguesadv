@@ -3,7 +3,10 @@ import { FaWhatsapp } from "react-icons/fa";
 
 export const Hero = () => {
   return (
-    <section className="relative flex items-center justify-center min-h-screen bg-gradient-to-b from-[#00274B] to-blue-900 text-white px-6 md:px-12 py-8">
+    <section
+      id="hero"
+      className="relative flex items-center justify-center min-h-screen bg-gradient-to-b from-[#00274B] to-blue-900 text-white px-6 md:px-12 py-8"
+    >
       {/* Overlay para suavizar o fundo */}
       <div className="absolute inset-0 bg-black opacity-40"></div>
 
@@ -17,7 +20,7 @@ export const Hero = () => {
           sizes="(max-width: 768px) 100px, 200px"
           quality={100}
           className="rounded-xl shadow-lg"
-          priority
+          // priority
         />
         {/* Título principal */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">

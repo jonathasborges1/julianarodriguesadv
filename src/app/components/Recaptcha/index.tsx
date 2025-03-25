@@ -25,12 +25,16 @@ const ReCaptchaCustom: React.FC<ReCaptchaCustomProps> = ({
 
   return (
     <div className={styles.recaptcha}>
-      <ReCAPTCHA
-        sitekey={ConfigApp?.RECAPTCHA_KEY}
-        onChange={handleChange}
-        onErrored={() => onVerify(false)}
-        theme={theme}
-      />
+      {ConfigApp?.RECAPTCHA_KEY ? (
+        <ReCAPTCHA
+          sitekey={ConfigApp.RECAPTCHA_KEY ?? ""}
+          onChange={handleChange}
+          onErrored={() => onVerify(false)}
+          theme={theme}
+        />
+      ) : (
+        <>Problemas com o recaptcha, avise o administrador!</>
+      )}
     </div>
   );
 };

@@ -6,7 +6,7 @@ import { Montserrat } from "next/font/google";
 import { SITE_URL } from "@/lib/config";
 import ThemeRegistry from "@/lib/ThemeRegistry";
 
-import { LoadingScreen } from "./components/LoadingApp/LoadingScreen";
+import { LoadingApp } from "./components/LoadingApp";
 import { LogToBrowser } from "./components/LogToBrowser/LogToBrowser";
 import { VersionLogger } from "./components/VersionLogger/VersionLogger";
 
@@ -81,7 +81,7 @@ export default function RootLayout({
           <ThemeRegistry>
             <LogToBrowser url={SITE_URL} />
             <VersionLogger />
-            <LoadingScreen />
+            <LoadingApp />
             {children}
           </ThemeRegistry>
         </NotistackProvider>

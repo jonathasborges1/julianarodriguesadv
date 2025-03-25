@@ -1,12 +1,22 @@
+// src/lib/ThemeRegistry.tsx
 "use client";
 
 import * as React from "react";
+import { CssBaseline } from "@mui/material";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { CacheProvider } from "@emotion/react";
-import { ThemeProvider, CssBaseline } from "@mui/material";
-import theme from "./theme";
-import createEmotionCache from "./emotion-cache";
+import createEmotionCache from "./createEmotionCache";
 
-const emotionCache = createEmotionCache();
+// 🔧 Criação do cache SSR
+const cache = createEmotionCache();
+
+const theme = createTheme({
+  palette: {
+    mode: "dark", // ou "light", conforme desejado
+    primary: { main: "#DAA520" },
+    background: { default: "#121212" },
+  },
+});
 
 export default function ThemeRegistry({
   children,
@@ -14,7 +24,7 @@ export default function ThemeRegistry({
   children: React.ReactNode;
 }) {
   return (
-    <CacheProvider value={emotionCache}>
+    <CacheProvider value={cache}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         {children}
