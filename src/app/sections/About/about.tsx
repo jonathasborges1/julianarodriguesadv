@@ -51,16 +51,14 @@ export const About = () => {
 
           {/* Introdução */}
           <p className="mt-6 text-md lg:text-lg text-gray-800 leading-relaxed text-left md:text-justify">
-            Com mais de <strong>10 anos de experiência</strong> no Direito
-            Trabalhista, a Dra. Juliana Rodrigues se dedica à defesa dos
-            direitos dos trabalhadores e empregadores, atuando com ética e
-            compromisso.
+            A Dra. Juliana Rodrigues atua no Direito Trabalhista há mais de 10
+            anos. Defende os direitos de trabalhadores e empregadores com ética
+            e compromisso.
           </p>
 
           {/* Áreas de atuação */}
           <p className="mt-4 text-md text-gray-800 leading-relaxed text-left md:text-justify">
-            Sua atuação inclui <strong>processos trabalhistas em geral</strong>,
-            abrangendo:
+            Atende em processos trabalhistas variados, incluindo:
           </p>
 
           <ul className="flex flex-col gap-4 sm:gap-1 text-left mt-4 text-md text-gray-800 leading-relaxed text-justify list-disc list-inside">
@@ -90,11 +88,10 @@ export const About = () => {
           </ul>
 
           {/* Objetivo e Missão */}
-          <p className="mt-4 text-md text-gray-800 leading-relaxed text-left md:text-justify">
-            A missão da Dra. Juliana é oferecer um{" "}
-            <strong>atendimento jurídico especializado</strong>, garantindo que
-            cada cliente tenha seus direitos protegidos com{" "}
-            <strong>transparência, ética e compromisso</strong>.
+          <p className="mt-4 text-md lg:text-lg text-left md:text-justify text-gray-800 leading-relaxed ">
+            Sua missão é oferecer atendimento jurídico claro e confiável. Cada
+            cliente é atendido com transparência, ética e foco na defesa de seus
+            direitos.
           </p>
 
           {/* Destaques da Formação e Experiência */}

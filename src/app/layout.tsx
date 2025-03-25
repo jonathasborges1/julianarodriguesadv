@@ -11,6 +11,7 @@ import { LogToBrowser } from "./components/LogToBrowser/LogToBrowser";
 import { VersionLogger } from "./components/VersionLogger/VersionLogger";
 
 import { NotistackProvider } from "./providers/SnackbarProvider";
+import Script from "next/script";
 
 // 🔹 Configurando a fonte Montserrat
 const montserrat = Montserrat({
@@ -107,6 +108,19 @@ export default function RootLayout({
             }),
           }}
         />
+        {/* Pixel do Google Ads */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16948823866"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-16948823866');
+      `}
+        </Script>
       </body>
     </html>
   );
