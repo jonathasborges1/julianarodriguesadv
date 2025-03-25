@@ -1,22 +1,21 @@
-// components/LoadingScreen.tsx
 "use client";
 
 import { useEffect, useState } from "react";
 import { FaSpinner } from "react-icons/fa";
 
 export const LoadingScreen = () => {
+  const [mounted, setMounted] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
+
     const handleLoad = () => {
-      // Adiciona transição de saída
       setFadeOut(true);
-      // Remove o componente após a transição
       setTimeout(() => setIsLoading(false), 500);
     };
 
-    // Caso o site já tenha carregado
     if (document.readyState === "complete") {
       handleLoad();
     } else {
@@ -26,7 +25,7 @@ export const LoadingScreen = () => {
     return () => window.removeEventListener("load", handleLoad);
   }, []);
 
-  if (!isLoading) return null;
+  if (!mounted || !isLoading) return null;
 
   return (
     <div

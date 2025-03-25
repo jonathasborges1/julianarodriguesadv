@@ -50,7 +50,7 @@ export const About = () => {
           </h2>
 
           {/* Introdução */}
-          <p className="mt-6 text-lg text-gray-800 leading-relaxed text-left md:text-justify">
+          <p className="mt-6 text-md lg:text-lg text-gray-800 leading-relaxed text-left md:text-justify">
             Com mais de <strong>10 anos de experiência</strong> no Direito
             Trabalhista, a Dra. Juliana Rodrigues se dedica à defesa dos
             direitos dos trabalhadores e empregadores, atuando com ética e
@@ -58,12 +58,12 @@ export const About = () => {
           </p>
 
           {/* Áreas de atuação */}
-          <p className="mt-4 text-lg text-gray-800 leading-relaxed text-left md:text-justify">
+          <p className="mt-4 text-md text-gray-800 leading-relaxed text-left md:text-justify">
             Sua atuação inclui <strong>processos trabalhistas em geral</strong>,
             abrangendo:
           </p>
 
-          <ul className="flex flex-col gap-4 sm:gap-1 text-left mt-4 text-lg text-gray-800 leading-relaxed text-justify list-disc list-inside">
+          <ul className="flex flex-col gap-4 sm:gap-1 text-left mt-4 text-md text-gray-800 leading-relaxed text-justify list-disc list-inside">
             <li>
               <strong>Rescisões contratuais</strong> e cálculos trabalhistas;
             </li>
@@ -90,7 +90,7 @@ export const About = () => {
           </ul>
 
           {/* Objetivo e Missão */}
-          <p className="mt-4 text-lg text-gray-800 leading-relaxed text-left md:text-justify">
+          <p className="mt-4 text-md text-gray-800 leading-relaxed text-left md:text-justify">
             A missão da Dra. Juliana é oferecer um{" "}
             <strong>atendimento jurídico especializado</strong>, garantindo que
             cada cliente tenha seus direitos protegidos com{" "}
@@ -98,7 +98,7 @@ export const About = () => {
           </p>
 
           {/* Destaques da Formação e Experiência */}
-          <p className="mt-6 text-lg text-gray-800 leading-relaxed text-left md:text-justify">
+          <p className="mt-6 text-md text-gray-800 leading-relaxed text-left md:text-justify">
             Formada pela <strong>Universidade UniNorte</strong>, a Dra. Juliana
             se especializou em
             <strong>

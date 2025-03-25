@@ -5,8 +5,14 @@ import { useEffect } from "react";
 export function VersionLogger() {
   useEffect(() => {
     fetch("/version.json")
-      .then((res) => res.json())
-      .then((data) => {
+      .then(async (res) => {
+        if (!res.ok) throw new Error(`Status ${res.status}`);
+        const data = await res.json();
+
+        if (!data.version || !data.commit || !data.buildTime) {
+          throw new Error("Campos ausentes no version.json");
+        }
+
         console.log("🧭 Versão do projeto:");
         console.log(`   🔢 Versão: ${data.version}`);
         console.log(`   🧬 Commit: ${data.commit}`);
