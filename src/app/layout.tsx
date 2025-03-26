@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   description:
     "Advogada trabalhista em Manaus com atendimento na OAB e online para todo o Brasil. Especialista em direitos trabalhistas, rescisões e ações judiciais.",
   icons: {
-    icon: "/favicon-32x32.png", // ícone padrão
-    shortcut: "/favicon.ico", // fallback
+    icon: "/favicon.ico", // ícone padrão
+    shortcut: "/favicon-32x32.png", // fallback
     apple: "/apple-touch-icon.png", // Apple
   },
   manifest: "/site.webmanifest",
@@ -55,10 +55,10 @@ export const metadata: Metadata = {
     siteName: "Dra. Juliana Rodrigues - Advocacia Trabalhista",
     images: [
       {
+        alt: "Dra. Juliana Rodrigues - Advogada Trabalhista em Manaus",
         url: `${SITE_URL}/images/dra-juliana-rodrigues-advogada-trabalhista-manaus.jpg`,
         width: 1200,
         height: 630,
-        alt: "Dra. Juliana Rodrigues - Advogada Trabalhista em Manaus",
       },
     ],
     type: "website",
