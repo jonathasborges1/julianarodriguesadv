@@ -1,4 +1,5 @@
 import "./globals.css";
+import Head from "next/head";
 
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
@@ -77,6 +78,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" className={montserrat.variable}>
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+      </Head>
       <body>
         <NotistackProvider>
           <ThemeRegistry>
@@ -94,25 +106,106 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LegalService",
-              name: "Dra. Juliana Rodrigues",
+              name: "Juliana Rodrigues",
               image: `${SITE_URL}/images/dra-juliana-rodrigues-advogada-trabalhista-manaus.jpg`,
               url: SITE_URL,
               address: {
                 "@type": "PostalAddress",
+                streetAddress: "R. Salvador, 120 - Adrianópolis",
                 addressLocality: "Manaus",
+                postalCode: "69057-040",
                 addressCountry: "BR",
               },
-              priceRange: "Sob consulta",
+              telephone: "+55 92 98230-1415",
               areaServed: "BR",
+              openingHoursSpecification: {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                ],
+                opens: "08:00",
+                closes: "18:00",
+              },
+              priceRange: "Sob consulta",
               sameAs: ["https://www.instagram.com/julianarodrigues.advogada"],
             }),
           }}
         />
+        {/* ✅ Schema.org para a Pessoa (Person) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Juliana Rodrigues",
+              jobTitle: "Advogada Trabalhista",
+              image: `${SITE_URL}/images/dra-juliana-rodrigues-advogada-trabalhista-manaus.jpg`,
+              worksFor: {
+                "@type": "LegalService",
+                name: "Juliana Rodrigues - Advocacia Trabalhista",
+              },
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "R. Salvador, 120 - Adrianópolis",
+                addressLocality: "Manaus",
+                addressRegion: "AM",
+                postalCode: "69057-040",
+                addressCountry: "BR",
+              },
+              sameAs: ["https://www.instagram.com/julianarodrigues.advogada"],
+            }),
+          }}
+        />
+
+        {/* ✅ Schema.org para BreadcrumbList */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: `${SITE_URL}/`,
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Sobre",
+                  item: `${SITE_URL}/#sobre`,
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: "Localizacao",
+                  item: `${SITE_URL}/#localizacao`,
+                },
+                {
+                  "@type": "ListItem",
+                  position: 4,
+                  name: "Contato",
+                  item: `${SITE_URL}/#contato`,
+                },
+              ],
+            }),
+          }}
+        />
+
         {/* Pixel do Google Ads */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-16948823866"
           strategy="afterInteractive"
         />
+
         <Script id="gtag-init" strategy="afterInteractive">
           {`
         window.dataLayer = window.dataLayer || [];
