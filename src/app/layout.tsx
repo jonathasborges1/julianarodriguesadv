@@ -79,6 +79,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={montserrat.variable}>
       <Head>
+        <meta name="apple-mobile-web-app-title" content="Juliana Adv" />
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="icon"

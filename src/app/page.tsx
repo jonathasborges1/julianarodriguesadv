@@ -11,7 +11,7 @@ export default function Home() {
     <>
       {/* Links internos via âncoras - ajudam na navegação e no SEO */}
       <Navbar />
-      <div className="pt-14 md:pt-20">
+      <div className="pt-14 md:pt-16">
         <HeroSection />
         <AboutSection />
         <OfficeMapSection />

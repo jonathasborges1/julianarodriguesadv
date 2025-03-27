@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="flex flex-wrap justify-center items-center gap-2 text-center text-sm md:text-base px-4">
+    <footer className="flex flex-wrap justify-center items-center gap-0 text-center text-sm md:text-base px-4">
       <span>
         Verificar mais informações sobre Dra. Juliana Rodrigues no perfil do
         Instagram
