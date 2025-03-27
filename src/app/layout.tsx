@@ -1,5 +1,6 @@
 import "./globals.css";
 import Head from "next/head";
+import Script from "next/script";
 
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
@@ -7,12 +8,11 @@ import { Montserrat } from "next/font/google";
 import { SITE_URL } from "@/lib/config";
 import ThemeRegistry from "@/lib/ThemeRegistry";
 
-import { LoadingApp } from "./components/LoadingApp";
-import { LogToBrowser } from "./components/LogToBrowser/LogToBrowser";
-import { VersionLogger } from "./components/VersionLogger/VersionLogger";
+import { LoadingApp } from "@/components/LoadingApp";
+import { LogToBrowser } from "@/components/LogToBrowser/LogToBrowser";
+import { VersionLogger } from "@/components/VersionLogger/VersionLogger";
 
-import { NotistackProvider } from "./providers/SnackbarProvider";
-import Script from "next/script";
+import { NotistackProvider } from "@/providers/SnackbarProvider";
 
 // 🔹 Configurando a fonte Montserrat
 const montserrat = Montserrat({

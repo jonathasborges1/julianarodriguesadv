@@ -2,6 +2,7 @@
 module.exports = {
   siteUrl: 'https://julianarodriguesadv.com.br',
   generateRobotsTxt: true,
+  generateIndexSitemap: false,
   sitemapSize: 5000,
   changefreq: 'weekly',
   priority: 0.7,

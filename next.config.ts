@@ -1,5 +1,6 @@
 import type { NextConfig } from "next";
 
+/** @type {import('next').NextConfig} */
 const nextConfig: NextConfig = {
   output: "export", // Necessário para Cloudflare Pages
   distDir: "out", // Define o diretório de saída para "out"

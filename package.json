@@ -5,10 +5,13 @@
   "scripts": {
     "dev": "cross-env TURBOPACK=0 next dev --turbopack",
     "generate:version": "npx tsx scripts/generate-version.ts",
+    "generate:sitemap": "npx tsx scripts/generate-sitemap.ts",
     "build": "npm run generate:version && next build",
+    "postbuild":"npm run generate:sitemap",
+    "build:old": "npm run generate:version && next build",
+    "postbuild:dev": "next-sitemap --config next-sitemap.config.cjs",
     "start": "next start",
-    "lint": "next lint",
-    "postbuild": "next-sitemap --config next-sitemap.config.cjs"
+    "lint": "next lint"
   },
   "dependencies": {
     "@emotion/cache": "^11.14.0",
