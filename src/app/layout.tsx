@@ -75,7 +75,6 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={montserrat.variable}>
       <head>
-        {/* Metadados e favicons extras */}
         <meta name="apple-mobile-web-app-title" content="Juliana Adv" />
         <meta name="application-name" content="Juliana Adv" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -113,7 +112,6 @@ export default function RootLayout({
       </head>
 
       <body>
-        {/* ✅ JSON-LD estruturado renderizado corretamente */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -125,7 +123,8 @@ export default function RootLayout({
                   "@id": `${SITE_URL}/#website`,
                   url: SITE_URL,
                   name: "Juliana Rodrigues - Advocacia Trabalhista",
-                  description: metadata.description,
+                  description:
+                    "Advogada trabalhista em Manaus com atendimento na OAB e online para todo o Brasil. Especialista em direitos trabalhistas, rescisões e ações judiciais.",
                   inLanguage: "pt-BR",
                   potentialAction: {
                     "@type": "SearchAction",
@@ -137,7 +136,7 @@ export default function RootLayout({
                   "@type": "WebPage",
                   "@id": `${SITE_URL}/#webpage`,
                   url: SITE_URL,
-                  name: metadata.title,
+                  name: "Dra. Juliana Rodrigues - Advogada Trabalhista em Manaus",
                   isPartOf: { "@id": `${SITE_URL}/#website` },
                   primaryImageOfPage: {
                     "@id": `${SITE_URL}/images/dra-juliana-rodrigues-advogada-trabalhista-manaus.jpg`,
@@ -146,19 +145,10 @@ export default function RootLayout({
                   inLanguage: "pt-BR",
                 },
                 {
-                  "@type": "Person",
-                  "@id": `${SITE_URL}/#juliana`,
-                  name: "Juliana Rodrigues",
-                  jobTitle: "Advogada Trabalhista",
+                  "@type": "LegalService",
+                  "@id": `${SITE_URL}/#legalservice`,
+                  name: "Juliana Rodrigues - Advocacia Trabalhista",
                   image: `${SITE_URL}/images/dra-juliana-rodrigues-advogada-trabalhista-manaus.jpg`,
-                  worksFor: {
-                    "@type": "LegalService",
-                    name: "Juliana Rodrigues - Advocacia Trabalhista",
-                  },
-                  alumniOf: {
-                    "@type": "CollegeOrUniversity",
-                    name: "UniNorte",
-                  },
                   address: {
                     "@type": "PostalAddress",
                     streetAddress: "Rua Salvador, 120 - Adrianópolis",
@@ -168,7 +158,22 @@ export default function RootLayout({
                     addressCountry: "BR",
                   },
                   telephone: "+55 92 98230-1415",
-                  email: "julianasouzarodrigues.adv@gmail.com",
+                  priceRange: "Sob consulta",
+                  url: SITE_URL,
+                },
+                {
+                  "@type": "Person",
+                  "@id": `${SITE_URL}/#juliana`,
+                  name: "Dra. Juliana Rodrigues",
+                  jobTitle: "Advogada Trabalhista",
+                  image: `${SITE_URL}/images/dra-juliana-rodrigues-advogada-trabalhista-manaus.jpg`,
+                  worksFor: {
+                    "@id": `${SITE_URL}/#legalservice`,
+                  },
+                  alumniOf: {
+                    "@type": "CollegeOrUniversity",
+                    name: "UniNorte",
+                  },
                   sameAs: [
                     "https://wa.me/5592982301415",
                     "https://www.instagram.com/julianarodrigues.advogada",
@@ -218,7 +223,6 @@ export default function RootLayout({
           </ThemeRegistry>
         </NotistackProvider>
 
-        {/* 🎯 Google Ads / Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-16948823866"
           strategy="afterInteractive"
