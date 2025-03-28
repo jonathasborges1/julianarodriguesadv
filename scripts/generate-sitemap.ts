@@ -7,7 +7,6 @@ const OUTPUT_FILE = path.join(__dirname, "..", "public", "sitemap.xml");
 
 const ignoreList = new Set([
   "_next",
-  "favicon.ico",
   "404.html",
   "sitemap.xml",
   "robots.txt",
@@ -42,13 +41,10 @@ function getRoutesFromOutDir(dir: string, baseRoute = ""): string[] {
 
 function generateSitemap(urls: string[]): string {
   const entries = urls
-    .map((url) => `  <url><loc>${DOMAIN}${url}</loc></url>`)
+    .map((url) => `  <url>\n    <loc>${DOMAIN}${url}</loc>\n  </url>`)
     .join("\n");
 
-  return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${entries}
-</urlset>`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entries}\n</urlset>`;
 }
 
 function writeSitemap(content: string) {
@@ -61,5 +57,10 @@ function writeSitemap(content: string) {
 
 // Execução
 const routes = getRoutesFromOutDir(DIST_DIR);
-const sitemap = generateSitemap(routes);
+
+// Inclui favicon.ico e favicon-32x32.png
+const extraUrls = ["/favicon.ico", "/favicon-32x32.png"];
+const allUrls = [...routes, ...extraUrls];
+
+const sitemap = generateSitemap(allUrls);
 writeSitemap(sitemap);
