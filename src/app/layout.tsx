@@ -1,5 +1,4 @@
 import "./globals.css";
-import Head from "next/head";
 import Script from "next/script";
 
 import type { Metadata } from "next";
@@ -11,7 +10,6 @@ import ThemeRegistry from "@/lib/ThemeRegistry";
 import { LoadingApp } from "@/components/LoadingApp";
 import { LogToBrowser } from "@/components/LogToBrowser/LogToBrowser";
 import { VersionLogger } from "@/components/VersionLogger/VersionLogger";
-
 import { NotistackProvider } from "@/providers/SnackbarProvider";
 
 const montserrat = Montserrat({
@@ -76,23 +74,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" className={montserrat.variable}>
-      <Head>
-        {/* Título do Web App para dispositivos móveis */}
+      <head>
+        {/* Metadados e favicons extras */}
         <meta name="apple-mobile-web-app-title" content="Juliana Adv" />
         <meta name="application-name" content="Juliana Adv" />
-
-        {/* Favicon SVG moderno */}
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
-        {/* Favicon ICO completo com múltiplos tamanhos */}
         <link
           rel="icon"
           type="image/x-icon"
           href="/favicon.ico"
           sizes="16x16 32x32 48x48"
         />
-
-        {/* PNG fallback para navegadores que não suportam SVG */}
         <link
           rel="icon"
           type="image/png"
@@ -111,20 +103,17 @@ export default function RootLayout({
           sizes="48x48"
           href="/favicon-48x48.png"
         />
-
-        {/* <!-- Clássico .ico --> */}
         <link rel="shortcut icon" href="/favicon.ico" />
-
-        {/* Apple Touch Icon para iOS */}
         <link
           rel="apple-touch-icon"
           sizes="180x180"
           href="/apple-touch-icon.png"
         />
-
-        {/* Manifesto (já presente, mas mantendo aqui para referência) */}
         <link rel="manifest" href="/site.webmanifest" />
-        {/* ✅ JSON-LD estruturado centralizado */}
+      </head>
+
+      <body>
+        {/* ✅ JSON-LD estruturado renderizado corretamente */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -219,9 +208,7 @@ export default function RootLayout({
             }),
           }}
         />
-      </Head>
 
-      <body>
         <NotistackProvider>
           <ThemeRegistry>
             <LogToBrowser url={SITE_URL} />

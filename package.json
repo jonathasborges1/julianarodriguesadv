@@ -7,11 +7,12 @@
     "generate:version": "npx tsx scripts/generate-version.ts",
     "generate:sitemap": "npx tsx scripts/generate-sitemap.ts",
     "build": "npm run generate:version && next build",
-    "postbuild":"npm run generate:sitemap",
+    "postbuild": "npm run generate:sitemap",
     "build:old": "npm run generate:version && next build",
     "postbuild:dev": "next-sitemap --config next-sitemap.config.cjs",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "preview": "serve out -l 4000"
   },
   "dependencies": {
     "@emotion/cache": "^11.14.0",
@@ -46,6 +47,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.2.2",
     "postcss": "^8.5.3",
+    "serve": "^14.2.4",
     "tailwindcss": "^4.0.14",
     "ts-node": "^10.9.2",
     "tsx": "^4.19.3",
