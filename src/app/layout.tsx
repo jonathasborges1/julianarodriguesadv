@@ -112,6 +112,9 @@ export default function RootLayout({
           href="/favicon-48x48.png"
         />
 
+        {/* <!-- Clássico .ico --> */}
+        <link rel="shortcut icon" href="/favicon.ico" />
+
         {/* Apple Touch Icon para iOS */}
         <link
           rel="apple-touch-icon"
