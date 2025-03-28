@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
   verification: {
-    google: "-aEdvna45HfuoQzvEtZiYF0J6Q6snzapEc1lmIuTmGU",
+    google: "7aA66MJ9d3jINANAHZhtgJRAVdWSQzU8UWUGj5onEuQ",
   },
   alternates: {
     canonical: SITE_URL,
@@ -109,6 +109,15 @@ export default function RootLayout({
           href="/apple-touch-icon.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
+        <Script id="gtm-head" strategy="beforeInteractive">
+          {`
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-553P2MZD');
+      `}
+        </Script>
       </head>
 
       <body>
@@ -223,7 +232,7 @@ export default function RootLayout({
           </ThemeRegistry>
         </NotistackProvider>
 
-        <Script
+        {/* <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-16948823866"
           strategy="afterInteractive"
         />
@@ -234,7 +243,15 @@ export default function RootLayout({
             gtag('js', new Date());
             gtag('config', 'AW-16948823866');
           `}
-        </Script>
+        </Script> */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-553P2MZD"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
       </body>
     </html>
   );
