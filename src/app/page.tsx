@@ -3,7 +3,7 @@ import { Hero as HeroSection } from "@/sections/Hero/hero";
 import { OfficeMap as OfficeMapSection } from "@/sections/OfficeMap/officeMap";
 import { Contact as ContactSection } from "@/sections/Contact";
 import { Footer as FooterSection } from "@/sections/Footer";
-
+import { Faq as FaqSection } from "@/sections/Faq";
 import { Navbar } from "@/components/Navbar";
 
 export default function Home() {
@@ -16,6 +16,7 @@ export default function Home() {
         <AboutSection />
         <OfficeMapSection />
         <ContactSection />
+        <FaqSection />
         <FooterSection />
       </div>
     </>
