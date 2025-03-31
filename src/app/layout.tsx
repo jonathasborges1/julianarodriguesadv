@@ -20,7 +20,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Dra. Juliana Rodrigues - Advogada Trabalhista em Manaus",
+  title: "Juliana Rodrigues - Advogada Trabalhista em Manaus",
   description:
     "Advogada trabalhista em Manaus com atendimento na OAB e online para todo o Brasil. Especialista em direitos trabalhistas, rescisões e ações judiciais.",
   icons: {
@@ -43,16 +43,16 @@ export const metadata: Metadata = {
     "rescisão trabalhista",
     "direitos do trabalhador",
   ],
-  authors: [{ name: "Dra. Juliana Rodrigues" }],
+  authors: [{ name: "Juliana Rodrigues" }],
   openGraph: {
-    title: "Dra. Juliana Rodrigues - Advogada Trabalhista em Manaus",
+    title: "Juliana Rodrigues - Advogada Trabalhista em Manaus",
     description:
       "Atendimento jurídico especializado em Direito Trabalhista para trabalhadores e empresas. Sede da OAB em Manaus e atendimento online.",
     url: SITE_URL,
-    siteName: "Dra. Juliana Rodrigues - Advocacia Trabalhista",
+    siteName: "Juliana Rodrigues - Advocacia Trabalhista",
     images: [
       {
-        alt: "Dra. Juliana Rodrigues - Advogada Trabalhista em Manaus",
+        alt: " Juliana Rodrigues - Advogada Trabalhista em Manaus",
         url: `${SITE_URL}/images/dra-juliana-rodrigues-advogada-trabalhista-manaus.jpg`,
         width: 1200,
         height: 630,
@@ -153,7 +153,7 @@ export default function RootLayout({
                   "@type": "WebPage",
                   "@id": `${SITE_URL}/#webpage`,
                   url: SITE_URL,
-                  name: "Dra. Juliana Rodrigues - Advogada Trabalhista em Manaus",
+                  name: "Juliana Rodrigues - Advogada Trabalhista em Manaus",
                   isPartOf: { "@id": `${SITE_URL}/#website` },
                   primaryImageOfPage: {
                     "@id": `${SITE_URL}/images/dra-juliana-rodrigues-advogada-trabalhista-manaus.jpg`,
@@ -181,7 +181,7 @@ export default function RootLayout({
                 {
                   "@type": "Person",
                   "@id": `${SITE_URL}/#juliana`,
-                  name: "Dra. Juliana Rodrigues",
+                  name: "Juliana Rodrigues",
                   jobTitle: "Advogada Trabalhista",
                   image: `${SITE_URL}/images/dra-juliana-rodrigues-advogada-trabalhista-manaus.jpg`,
                   worksFor: {
