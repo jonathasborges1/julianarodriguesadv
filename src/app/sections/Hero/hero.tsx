@@ -24,8 +24,8 @@ export const Hero = () => {
         />
         {/* Título principal */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
-          <span className="inline text-[#DAA520]">Dra. Juliana Rodrigues</span>{" "}
-          | Advogada
+          <span className="inline text-[#DAA520]">Juliana Rodrigues</span> |
+          Advogada
           <br /> Especialista em Direito Trabalhista
         </h1>
 
