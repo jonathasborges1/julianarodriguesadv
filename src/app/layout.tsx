@@ -143,11 +143,11 @@ export default function RootLayout({
                   description:
                     "Advogada trabalhista em Manaus com atendimento na OAB e online para todo o Brasil. Especialista em direitos trabalhistas, rescisões e ações judiciais.",
                   inLanguage: "pt-BR",
-                  potentialAction: {
-                    "@type": "SearchAction",
-                    target: `${SITE_URL}/?s={search_term_string}`,
-                    "query-input": "required name=search_term_string",
-                  },
+                  // potentialAction: {
+                  //   "@type": "SearchAction",
+                  //   target: `${SITE_URL}/?s={search_term_string}`,
+                  //   "query-input": "required name=search_term_string",
+                  // },
                 },
                 {
                   "@type": "WebPage",

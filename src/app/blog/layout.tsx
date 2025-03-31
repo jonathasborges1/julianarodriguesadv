@@ -8,7 +8,7 @@ export default function BlogLayout({ children }: { children: ReactNode }) {
   return (
     <>
       <Navbar />
-      <div className="pt-14 md:pt-16">{children}</div>
+      <div className="pt-14 md:pt-16 bg-white">{children}</div>
       <Footer />
     </>
   );

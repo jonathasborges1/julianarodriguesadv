@@ -1,10 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
-// const ACTION_URL =
-//   "https://script.google.com/macros/s/AKfycbyKBCPLwWX1de4JJzPSW82fczeluNLCi1JRYHQ28NpPVTMWHdZ1pTOUSw9_JEVA1G9y/exec";
-
 const ACTION_URL =
-  "https://docs.google.com/forms/u/0/d/e/1FAIpQLScoQvQocgpRJN_pq--JkyZrZZ_mNVyaa1i9AJGWpupQmGBZGg/formResponse";
+  "https://script.google.com/macros/s/AKfycbyKBCPLwWX1de4JJzPSW82fczeluNLCi1JRYHQ28NpPVTMWHdZ1pTOUSw9_JEVA1G9y/exec";
 
 export async function POST(req: NextRequest) {
   try {
