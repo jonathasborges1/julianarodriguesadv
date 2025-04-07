@@ -9,6 +9,15 @@ const nextConfig: NextConfig = {
     unoptimized: true, // Evita otimização de imagens no Cloudflare Pages
   },
   compress: true, // Gzip habilitado
+  async redirects() {
+    return [
+      {
+        source: "/\\?s=:query*", // escapa o "?" para evitar conflito de parsing
+        destination: "/",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
