@@ -19,8 +19,8 @@ export function Footer() {
         <div>
           <h3 className="text-xl font-bold mb-4">Dra. Juliana Rodrigues</h3>
           <p className="text-sm leading-relaxed">
-            Advogada Trabalhista em Manaus com atendimento presencial e online
-            para todo o Brasil.
+            Advogada Trabalhista / consumidor em Manaus com atendimento
+            presencial e online para todo o Brasil.
           </p>
 
           <div className="mt-4 space-y-3 text-sm">

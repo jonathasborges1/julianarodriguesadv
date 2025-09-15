@@ -13,7 +13,7 @@ const faqList = [
   {
     question: "A Dra. Juliana Rodrigues é especializada em quais áreas?",
     answer:
-      "A Dra. Juliana é advogada especializada em Direito Trabalhista, atuando em casos de justa causa, rescisão indireta, reintegração no emprego, assédio moral e cálculo de verbas rescisórias.",
+      "Atua com foco em Direito do Trabalho e Direito do Consumidor. No trabalhista: justa causa, rescisão indireta, reintegração, assédio moral, horas extras e cálculo de verbas rescisórias. No consumidor: descontos indevidos (ex.: consignado/INSS), cobranças abusivas de bancos e telecom, celular vendido sem carregador, produto com defeito/garantia, atraso/cancelamento de voo, faturas de energia/água e problemas em compras online (chargeback). Atendimento presencial em Manaus/AM e on-line para todo o Brasil.",
   },
   {
     question: "O que é rescisão indireta e como funciona?",

@@ -11,12 +11,12 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-white/70 shadow-md">
+    <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-white/100 shadow-md">
       <div className="max-w-7xl mx-auto px-4 py-1 flex items-center justify-between pt-3 border-0 border-red-500">
         {/* Logo + Nome */}
         <a href="#home" className="flex items-center gap-2">
           <Image
-            src="/images/logotipo-dra-juliana.png"
+            src="/images/logotipo-dra-juliana-2.png"
             alt="Logo Dra. Juliana"
             width={40}
             height={40}

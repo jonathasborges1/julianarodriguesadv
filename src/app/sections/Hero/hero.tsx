@@ -1,17 +1,21 @@
 import Image from "next/image";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaBalanceScale, FaWhatsapp } from "react-icons/fa";
 
 export const Hero = () => {
   return (
     <section
       id="home"
-      className="scroll-mt-12 md:scroll-mt-0 relative flex items-center justify-center min-h-screen bg-gradient-to-b from-[#00274B] to-blue-900 text-white px-6 md:px-12 py-8"
+      className="scroll-mt-8 md:scroll-mt-0 relative flex items-center justify-center min-h-screen bg-gradient-to-b from-[#00274B] to-blue-900 text-white px-6 md:px-12 py-6"
+      style={{ border: "0px solid white" }}
     >
       {/* Overlay para suavizar o fundo */}
       <div className="absolute inset-0 bg-black opacity-40"></div>
 
       {/* Conteúdo centralizado com flexbox */}
-      <div className="relative z-10 max-w-5xl flex flex-col items-center text-center gap-6 md:gap-10">
+      <div
+        className="relative z-10 max-w-5xl flex flex-col items-center text-center gap-6 md:gap-8"
+        style={{ border: "0px solid red" }}
+      >
         <Image
           src="/images/logotipo-dra-juliana.png"
           alt="Dra. Juliana Rodrigues - Advogada Trabalhista em Manaus"
@@ -23,18 +27,18 @@ export const Hero = () => {
           // priority
         />
         {/* Título principal */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
-          <span className="inline text-[#DAA520]">Juliana Rodrigues</span> |
-          Advogada
-          <br /> Especialista em Direito Trabalhista
+        <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
+          <span className="inline text-[#DAA520]">Juliana Rodrigues</span> |{" "}
+          {/* Advogada */}
+          {/* <br /> Especialista em Direito Trabalhista */}
+          Direito Trabalhista e Direito do Consumidor em Manaus
         </h1>
 
         {/* Subtítulo com mensagem de impacto */}
         <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed max-w-2xl">
-          A Dra. Juliana defende os direitos dos trabalhadores com dedicação e
-          experiência. Atua em Manaus e em todo o Brasil, sempre com atenção,
-          ética e respeito. Auxilia em casos de rescisões, processos
-          trabalhistas e outras questões do dia a dia.
+          Atuação prática para resolver demandas relacionadas ao direito do
+          trabalho e direito do consumidor. Atendimento presencial em Manaus e
+          on-line para todo o Brasil.
         </p>
 
         {/* Botões de ação */}
@@ -60,8 +64,9 @@ export const Hero = () => {
           <span className="bg-white text-gray-900 px-4 py-2 rounded-lg text-sm font-semibold shadow-md text-center">
             📜 <strong>Registro OAB:</strong> 10547 AM
           </span>
-          <span className="bg-white text-gray-900 px-4 py-2 rounded-lg text-sm font-semibold shadow-md text-center">
-            ⚖️ <strong>Especialista:</strong> Direito Trabalhista
+          <span className="bg-white text-gray-900 px-4 py-2 rounded-lg text-sm font-semibold shadow-md text-center flex items-center gap-2">
+            <FaBalanceScale aria-hidden="true" /> <strong>Especialista:</strong>{" "}
+            Trabalhista • Consumidor
           </span>
           <span className="bg-white text-gray-900 px-4 py-2 rounded-lg text-sm font-semibold shadow-md text-center">
             🌍 <strong>Atendimento:</strong> Online e Presencial
