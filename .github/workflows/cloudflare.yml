@@ -9,7 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      deployments: write
     name: Publish to Cloudflare Pages
     steps:
       - name: 🧾 Checkout do repositório
@@ -37,7 +36,6 @@ jobs:
       - name: 🚀 Deploy no Cloudflare Pages
         uses: cloudflare/pages-action@1
         with:
-          gitHubToken: ${{ secrets.TOKEN_GITHUB }}
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: "julianarodriguesadv"
