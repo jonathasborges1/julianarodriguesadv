@@ -3,10 +3,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import { SocialShare } from "@/components/SocialShare";
+import { buildArticleWhatsAppUrl } from "../whatsapp";
 import { generateMetadata, post } from "./metadata";
 export { generateMetadata };
 
 export default function JustaCausaPage() {
+  const whatsappUrl = buildArticleWhatsAppUrl("demissão por justa causa");
+
   return (
     <article className="max-w-4xl mx-auto px-4 py-10 text-gray-800">
       <h1 className="text-3xl sm:text-4xl font-bold mb-2">{post.title}</h1>
@@ -124,8 +127,10 @@ export default function JustaCausaPage() {
           você tem direito à reversão da justa.
         </p>
         <Link
-          href="/#contato"
+          href={whatsappUrl}
           className="inline-block bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Falar com a advogada
         </Link>
@@ -168,6 +173,14 @@ export default function JustaCausaPage() {
               className="text-blue-600 hover:underline"
             >
               Rescisão Indireta: entenda os direitos do trabalhador
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/blog/overbooking"
+              className="text-blue-600 hover:underline"
+            >
+              Overbooking: entenda seus direitos e como ser indenizado
             </Link>
           </li>
           <li>

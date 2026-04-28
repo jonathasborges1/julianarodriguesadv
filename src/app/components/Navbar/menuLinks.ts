@@ -8,6 +8,8 @@ import {
   FileWarning,
   Gavel,
   BookOpen,
+  Newspaper,
+  Plane,
 } from "lucide-react";
 
 export const menuLinks = [
@@ -20,6 +22,16 @@ export const menuLinks = [
     href: "#",
     icon: BookOpen,
     children: [
+      {
+        label: "Todos os artigos",
+        href: "/blog",
+        icon: Newspaper,
+      },
+      {
+        label: "Overbooking",
+        href: "/blog/overbooking",
+        icon: Plane,
+      },
       {
         label: "Reintegração",
         href: "/blog/reintegracao-no-emprego",

@@ -1,18 +1,16 @@
-// src/components/Navbar/DesktopMenu.tsx
 "use client";
 
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
+import { usePathname } from "next/navigation";
+import clsx from "clsx";
 import { menuLinks } from "./menuLinks";
 
 export function DesktopMenu() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
-
-  const handleDropdownClick = (index: number) => {
-    setOpenIndex((prev) => (prev === index ? null : index));
-  };
+  const pathname = usePathname();
 
   const handleLinkClick = () => setOpenIndex(null);
 
@@ -37,39 +35,45 @@ export function DesktopMenu() {
 
   return (
     <>
-      {menuLinks.map(({ href, label, children }, index) =>
-        children ? (
+      {menuLinks.map(({ href, label, children }, index) => {
+        const isActive = href !== "#" && pathname === href.split("#")[0];
+
+        return children ? (
           <div
             key={label}
             ref={dropdownRef}
             className="relative"
             onMouseEnter={() => setOpenIndex(index)}
+            onMouseLeave={() => setOpenIndex(null)}
           >
             <button
-              onClick={() => handleDropdownClick(index)}
-              className="flex items-center gap-1 text-gray-800 hover:text-blue-600 font-medium transition cursor-pointer"
+              onClick={() =>
+                setOpenIndex((prev) => (prev === index ? null : index))
+              }
+              className="flex items-center gap-1 text-gray-700 hover:text-[#00274B] font-medium transition cursor-pointer"
               aria-expanded={openIndex === index}
               aria-controls={`dropdown-${index}`}
             >
               {label}
               <ChevronDown
-                className={`w-4 h-4 transition-transform duration-200 ${
-                  openIndex === index ? "rotate-180" : ""
-                }`}
+                className={clsx(
+                  "w-4 h-4 transition-transform duration-200",
+                  openIndex === index && "rotate-180"
+                )}
               />
             </button>
 
             {openIndex === index && (
               <div
                 id={`dropdown-${index}`}
-                className="absolute left-0 mt-2 w-56 rounded-md bg-white shadow-md z-50 p-2 flex flex-col"
+                className="absolute left-0 mt-2 w-56 rounded-lg bg-white shadow-lg z-50 p-1 flex flex-col border border-gray-100"
               >
                 {children.map(({ href, label }) => (
                   <Link
                     key={href}
                     href={href}
                     onClick={handleLinkClick}
-                    className="px-4 py-2 text-sm text-blue-600 hover:bg-gray-100 rounded"
+                    className="px-4 py-2.5 text-sm text-gray-700 hover:bg-[#00274B]/5 hover:text-[#00274B] rounded-md transition"
                   >
                     {label}
                   </Link>
@@ -81,12 +85,24 @@ export function DesktopMenu() {
           <Link
             key={href}
             href={href}
-            className="text-gray-800 hover:text-blue-600 font-medium transition"
+            className={clsx(
+              "font-medium transition",
+              isActive
+                ? "text-[#00274B] border-b-2 border-[#00274B] pb-0.5"
+                : "text-gray-700 hover:text-[#00274B]"
+            )}
           >
             {label}
           </Link>
-        )
-      )}
+        );
+      })}
+
+      <Link
+        href="/#contato"
+        className="ml-2 px-4 py-2 bg-[#00274B] text-white text-sm font-semibold rounded-lg hover:bg-[#003d75] transition"
+      >
+        Agendar Consulta
+      </Link>
     </>
   );
 }

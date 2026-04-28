@@ -11,6 +11,21 @@ interface PostMeta {
   date: string;
 }
 
+const monthNumbers: Record<string, number> = {
+  janeiro: 0,
+  fevereiro: 1,
+  marco: 2,
+  abril: 3,
+  maio: 4,
+  junho: 5,
+  julho: 6,
+  agosto: 7,
+  setembro: 8,
+  outubro: 9,
+  novembro: 10,
+  dezembro: 11,
+};
+
 export default async function BlogPage() {
   const posts = await loadBlogPosts();
 
@@ -28,7 +43,6 @@ export default async function BlogPage() {
   );
 }
 
-// Função para ler dinamicamente os metadados
 async function loadBlogPosts(): Promise<PostMeta[]> {
   const blogDir = path.join(process.cwd(), "src/app/blog");
   const entries = fs.readdirSync(blogDir, { withFileTypes: true });
@@ -46,27 +60,31 @@ async function loadBlogPosts(): Promise<PostMeta[]> {
     }
   }
 
-  // ✅ Ordenar por data real (mais recente primeiro)
-  return posts.sort((a, b) => {
-    const parseDate = (d: string) =>
-      new Date(
-        d
-          .replace(" de ", "/")
-          .replace(" de ", "/")
-          .replace("Março", "03")
-          .replace("Abril", "04")
-          .replace("Maio", "05") // continue conforme os meses usados
-          .replace("Janeiro", "01")
-          .replace("Fevereiro", "02")
-          .replace("Junho", "06")
-          .replace("Julho", "07")
-          .replace("Agosto", "08")
-          .replace("Setembro", "09")
-          .replace("Outubro", "10")
-          .replace("Novembro", "11")
-          .replace("Dezembro", "12")
-      );
+  return posts.sort(
+    (a, b) => parsePostDate(b.date).getTime() - parsePostDate(a.date).getTime()
+  );
+}
 
-    return +parseDate(b.date) - +parseDate(a.date);
-  });
+function parsePostDate(date: string): Date {
+  const normalized = date
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(",", "")
+    .trim();
+
+  const match = normalized.match(/^(\d{1,2})\s+de\s+([a-z]+)\s+(\d{4})$/);
+
+  if (!match) {
+    return new Date(0);
+  }
+
+  const [, day, monthName, year] = match;
+  const month = monthNumbers[monthName];
+
+  if (month === undefined) {
+    return new Date(0);
+  }
+
+  return new Date(Number(year), month, Number(day));
 }
