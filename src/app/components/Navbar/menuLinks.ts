@@ -10,6 +10,7 @@ import {
   BookOpen,
   Newspaper,
   Plane,
+  HeartPulse,
 } from "lucide-react";
 
 export const menuLinks = [
@@ -46,6 +47,11 @@ export const menuLinks = [
         label: "Justa Causa",
         href: "/blog/justa-causa",
         icon: Gavel,
+      },
+      {
+        label: "Plano de Saúde",
+        href: "/blog/plano-de-saude-negou-exame",
+        icon: HeartPulse,
       },
     ],
   },
