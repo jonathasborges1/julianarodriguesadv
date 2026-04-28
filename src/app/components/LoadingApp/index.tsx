@@ -4,11 +4,11 @@ import { useEffect, useState } from "react";
 import { FaSpinner } from "react-icons/fa";
 
 export const LoadingApp = () => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
 
   useEffect(() => {
     const handleLoad = () => {
-      setTimeout(() => setShow(false), 500); // Fade-out
+      setTimeout(() => setShow(false), 500);
     };
 
     if (document.readyState === "complete") {
@@ -16,8 +16,6 @@ export const LoadingApp = () => {
     } else {
       window.addEventListener("load", handleLoad);
     }
-
-    setShow(true);
 
     return () => {
       window.removeEventListener("load", handleLoad);
