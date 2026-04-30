@@ -1,7 +1,40 @@
 // /app/blog/page.tsx
 import fs from "fs";
 import path from "path";
+import { Metadata } from "next";
 import { BlogCard } from "@/components/Blog/BlogCard";
+import { canonicalUrl, SITE_URL } from "@/lib/config";
+
+export const metadata: Metadata = {
+  title: "Blog Jurídico | Advogada Trabalhista em Manaus",
+  description:
+    "Artigos sobre direitos trabalhistas, rescisão indireta, justa causa e mais. Dra. Juliana Rodrigues, advogada em Manaus.",
+  alternates: { canonical: canonicalUrl("/blog") },
+  openGraph: {
+    title: "Blog Jurídico | Dra. Juliana Rodrigues",
+    description:
+      "Artigos sobre direitos trabalhistas, rescisão indireta, justa causa e mais.",
+    url: canonicalUrl("/blog"),
+    siteName: "Juliana Rodrigues Advocacia",
+    locale: "pt_BR",
+    type: "website",
+    images: [
+      {
+        url: `${SITE_URL}/images/dra-juliana-rodrigues-advogada-trabalhista-manaus.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Blog Jurídico - Dra. Juliana Rodrigues",
+      },
+    ],
+  },
+  keywords: [
+    "blog jurídico trabalhista",
+    "direitos trabalhistas Manaus",
+    "artigos advocacia trabalhista",
+    "advogada trabalhista Manaus",
+    "dra juliana rodrigues blog",
+  ],
+};
 
 interface PostMeta {
   slug: string;

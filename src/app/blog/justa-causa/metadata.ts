@@ -1,6 +1,6 @@
 // blog/justa-causa/metadata.ts
 import { Metadata } from "next";
-import { SITE_URL } from "@/lib/config";
+import { SITE_URL, canonicalUrl } from "@/lib/config";
 
 export const post = {
   slug: "justa-causa",
@@ -13,7 +13,7 @@ export const post = {
 };
 
 export const generateMetadata = async (): Promise<Metadata> => {
-  const url = `${SITE_URL}/blog/justa-causa`;
+  const url = canonicalUrl("/blog/justa-causa");
   const title = post.title;
   const description = post.excerpt;
 

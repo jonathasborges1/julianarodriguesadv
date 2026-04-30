@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { SITE_URL } from "@/lib/config";
+import { SITE_URL, canonicalUrl } from "@/lib/config";
 
 export const post = {
   slug: "overbooking",
@@ -12,7 +12,7 @@ export const post = {
 };
 
 export const generateMetadata = async (): Promise<Metadata> => {
-  const url = `${SITE_URL}/blog/overbooking`;
+  const url = canonicalUrl("/blog/overbooking");
   const title = post.title;
   const description = post.excerpt;
 

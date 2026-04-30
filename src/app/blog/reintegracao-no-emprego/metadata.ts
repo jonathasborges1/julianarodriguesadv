@@ -1,4 +1,4 @@
-import { SITE_URL } from "@/lib/config";
+import { SITE_URL, canonicalUrl } from "@/lib/config";
 import { Metadata } from "next";
 
 // /app/blog/reintegracao-no-emprego/metadata.ts
@@ -13,7 +13,7 @@ export const post = {
 };
 
 export const generateMetadata = async (): Promise<Metadata> => {
-  const url = `${SITE_URL}/blog/${post.slug}`;
+  const url = canonicalUrl(`/blog/${post.slug}`);
   const title = post.title;
   const description = post.excerpt;
 
