@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import {
   Instagram,
   Facebook,
@@ -12,6 +13,13 @@ import {
 import { menuLinks } from "@/components/Navbar/menuLinks";
 
 export function Footer() {
+  // Renderizado apenas no cliente para evitar que o Cloudflare
+  // obfusque o email e gere links /cdn-cgi/l/email-protection (404).
+  const [email, setEmail] = useState("");
+  useEffect(() => {
+    setEmail("julianasouzarodrigues.adv@gmail.com");
+  }, []);
+
   return (
     <footer className="bg-[#00274B] text-white py-12 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
@@ -34,15 +42,17 @@ export function Footer() {
                 (92) 98230-1415
               </a>
             </p>
-            <p className="flex items-center gap-2">
-              <Mail className="w-4 h-4" />
-              <a
-                href="mailto:julianasouzarodrigues.adv@gmail.com"
-                className="hover:underline"
-              >
-                julianasouzarodrigues.adv@gmail.com
-              </a>
-            </p>
+            {email && (
+              <p className="flex items-center gap-2">
+                <Mail className="w-4 h-4" />
+                <a
+                  href={`mailto:${email}`}
+                  className="hover:underline"
+                >
+                  {email}
+                </a>
+              </p>
+            )}
           </div>
         </div>
 
@@ -112,12 +122,12 @@ export function Footer() {
 
           <ul className="text-sm space-y-2">
             <li>
-              <Link href="/politica-de-privacidade" className="hover:underline">
+              <Link href="/politica-de-privacidade/" className="hover:underline">
                 Política de Privacidade
               </Link>
             </li>
             <li>
-              <Link href="/termos-de-uso" className="hover:underline">
+              <Link href="/termos-de-uso/" className="hover:underline">
                 Termos de Uso
               </Link>
             </li>

@@ -162,7 +162,7 @@ export default function RescisaoIndiretaPage() {
         <ul className="space-y-2">
           <li>
             <Link
-              href="/blog/justa-causa"
+              href="/blog/justa-causa/"
               className="text-blue-600 hover:underline"
             >
               Justa Causa: entenda seus direitos
@@ -170,7 +170,7 @@ export default function RescisaoIndiretaPage() {
           </li>
           <li>
             <Link
-              href="/blog/reintegracao-no-emprego"
+              href="/blog/reintegracao-no-emprego/"
               className="text-blue-600 hover:underline"
             >
               Reintegração no Emprego: quando o trabalhador pode voltar ao cargo
@@ -178,7 +178,7 @@ export default function RescisaoIndiretaPage() {
           </li>
           <li>
             <Link
-              href="/blog/overbooking"
+              href="/blog/overbooking/"
               className="text-blue-600 hover:underline"
             >
               Overbooking: entenda seus direitos e como ser indenizado

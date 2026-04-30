@@ -435,7 +435,7 @@ export default function OverbookingPage() {
         <ul className="space-y-2">
           <li>
             <Link
-              href="/blog/justa-causa"
+              href="/blog/justa-causa/"
               className="text-blue-600 hover:underline"
             >
               Justa Causa: entenda seus direitos e deveres
@@ -443,7 +443,7 @@ export default function OverbookingPage() {
           </li>
           <li>
             <Link
-              href="/blog/rescisao-indireta"
+              href="/blog/rescisao-indireta/"
               className="text-blue-600 hover:underline"
             >
               Rescisão Indireta: entenda os direitos do trabalhador

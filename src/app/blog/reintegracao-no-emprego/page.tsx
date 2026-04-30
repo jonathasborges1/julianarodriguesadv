@@ -138,7 +138,7 @@ export default function ReintegracaoNoEmpregoPage() {
         <ul className="space-y-2">
           <li>
             <Link
-              href="/blog/rescisao-indireta"
+              href="/blog/rescisao-indireta/"
               className="text-blue-600 hover:underline"
             >
               Rescisão Indireta: quando o trabalhador pode pedir demissão com
@@ -147,7 +147,7 @@ export default function ReintegracaoNoEmpregoPage() {
           </li>
           <li>
             <Link
-              href="/blog/justa-causa"
+              href="/blog/justa-causa/"
               className="text-blue-600 hover:underline"
             >
               Justa Causa: quando a demissão é considerada legal
@@ -155,14 +155,14 @@ export default function ReintegracaoNoEmpregoPage() {
           </li>
           <li>
             <Link
-              href="/blog/overbooking"
+              href="/blog/overbooking/"
               className="text-blue-600 hover:underline"
             >
               Overbooking: entenda seus direitos e como ser indenizado
             </Link>
           </li>
           <li>
-            <Link href="/blog" className="text-blue-600 hover:underline">
+            <Link href="/blog/" className="text-blue-600 hover:underline">
               Todos os artigos do blog
             </Link>
           </li>

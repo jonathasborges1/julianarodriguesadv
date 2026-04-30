@@ -25,32 +25,32 @@ export const menuLinks = [
     children: [
       {
         label: "Todos os artigos",
-        href: "/blog",
+        href: "/blog/",
         icon: Newspaper,
       },
       {
         label: "Overbooking",
-        href: "/blog/overbooking",
+        href: "/blog/overbooking/",
         icon: Plane,
       },
       {
         label: "Reintegração",
-        href: "/blog/reintegracao-no-emprego",
+        href: "/blog/reintegracao-no-emprego/",
         icon: Briefcase,
       },
       {
         label: "Rescisão Indireta",
-        href: "/blog/rescisao-indireta",
+        href: "/blog/rescisao-indireta/",
         icon: FileWarning,
       },
       {
         label: "Justa Causa",
-        href: "/blog/justa-causa",
+        href: "/blog/justa-causa/",
         icon: Gavel,
       },
       {
         label: "Plano de Saúde",
-        href: "/blog/plano-de-saude-negou-exame",
+        href: "/blog/plano-de-saude-negou-exame/",
         icon: HeartPulse,
       },
     ],

@@ -402,12 +402,12 @@ export default function PlanoSaudeNegouExamePage() {
         <h3 className="text-xl font-semibold mb-4">Leia também:</h3>
         <ul className="space-y-2">
           <li>
-            <Link href="/blog/overbooking" className="text-blue-600 hover:underline">
+            <Link href="/blog/overbooking/" className="text-blue-600 hover:underline">
               Overbooking: O que é, Seus Direitos e Como Ser Indenizado
             </Link>
           </li>
           <li>
-            <Link href="/blog/rescisao-indireta" className="text-blue-600 hover:underline">
+            <Link href="/blog/rescisao-indireta/" className="text-blue-600 hover:underline">
               Rescisão Indireta: entenda os direitos do trabalhador
             </Link>
           </li>
