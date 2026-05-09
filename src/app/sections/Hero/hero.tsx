@@ -24,7 +24,7 @@ export const Hero = () => {
           sizes="(max-width: 768px) 100px, 200px"
           quality={100}
           className="rounded-xl shadow-lg"
-          // priority
+          priority
         />
         {/* Título principal */}
         <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
@@ -65,7 +65,7 @@ export const Hero = () => {
             📜 <strong>Registro OAB:</strong> 10547 AM
           </span>
           <span className="bg-white text-gray-900 px-4 py-2 rounded-lg text-sm font-semibold shadow-md text-center flex items-center gap-2">
-            <FaBalanceScale aria-hidden="true" /> <strong>Especialista:</strong>{" "}
+            <FaBalanceScale aria-hidden="true" /> <strong>Atuação em:</strong>{" "}
             Trabalhista • Consumidor
           </span>
           <span className="bg-white text-gray-900 px-4 py-2 rounded-lg text-sm font-semibold shadow-md text-center">
@@ -81,14 +81,7 @@ export const Hero = () => {
           preserveAspectRatio="none"
         >
           <path
-            d="M0,0V46.29c47.5,18.17,96.92,29.78,147.67,30.89,
-         58.83,1.28,113.17-12.7,169.08-20.21,
-         C408.79,46,467.42,41.06,525,47.89,
-         582.5,54.56,638.79,71,694.67,81.58,
-         750.38,92.07,807.17,93.86,864.75,88.81,
-         923.58,83.54,977.92,72.32,1033.83,65.21,
-         1081.33,59.15,1130.75,57.29,1181.5,62.72,
-         1190,63.69,1200,66,1200,66V0Z"
+            d="M0,0V46.29C47.5,64.46,96.92,76.07,147.67,77.18C206.5,78.46,260.84,64.48,316.75,56.97C408.79,46,467.42,41.06,525,47.89C582.5,54.56,638.79,71,694.67,81.58C750.38,92.07,807.17,93.86,864.75,88.81C923.58,83.54,977.92,72.32,1033.83,65.21C1081.33,59.15,1130.75,57.29,1181.5,62.72C1190,63.69,1200,66,1200,66V0Z"
             fill="#fff"
           />
         </svg>

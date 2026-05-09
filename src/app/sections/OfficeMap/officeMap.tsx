@@ -21,7 +21,10 @@ export const OfficeMap = () => {
         <div className="w-full h-[280px] sm:h-[350px] md:h-[400px]">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.9498121829893!2d-60.01479169999999!3d-3.107979700000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6dd1fa2003c0bec5%3A0xf4c05aa28567bade!2sJuliana%20Rodrigues%20-%20Escrit%C3%B3rio%20de%20Advocacia%20-%20Advogado%20Manaus!5e0!3m2!1spt-BR!2sbr!4v1742776042943!5m2!1spt-BR!2sbr"
+            title="Localização do escritório da Dra. Juliana Rodrigues no Google Maps"
             className="w-full h-full rounded-xl shadow-md"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
             allowFullScreen
           ></iframe>
         </div>

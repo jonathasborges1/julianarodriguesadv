@@ -20,9 +20,10 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Juliana Rodrigues - Advogada Trabalhista em Manaus",
+  title:
+    "Juliana Rodrigues - Advogada Trabalhista e do Consumidor em Manaus",
   description:
-    "Advogada trabalhista em Manaus com atendimento na OAB e online para todo o Brasil. Especialista em direitos trabalhistas, rescisões e ações judiciais.",
+    "Advogada em Manaus com atuação em Direito do Trabalho e Direito do Consumidor. Atendimento presencial em Adrianópolis e on-line para todo o Brasil.",
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon-32x32.png",
@@ -37,17 +38,23 @@ export const metadata: Metadata = {
   },
   keywords: [
     "advogada trabalhista manaus",
+    "advogada do consumidor manaus",
     "advogada manaus",
     "direito do trabalho",
+    "direito do consumidor",
     "advogado OAB Manaus",
     "rescisão trabalhista",
+    "plano de saúde negou exame",
+    "atraso de voo indenização",
+    "descontos indevidos consignado",
     "direitos do trabalhador",
   ],
   authors: [{ name: "Juliana Rodrigues" }],
   openGraph: {
-    title: "Juliana Rodrigues - Advogada Trabalhista em Manaus",
+    title:
+      "Juliana Rodrigues - Advogada Trabalhista e do Consumidor em Manaus",
     description:
-      "Atendimento jurídico especializado em Direito Trabalhista para trabalhadores e empresas. Sede da OAB em Manaus e atendimento online.",
+      "Atuação em Direito do Trabalho e Direito do Consumidor para trabalhadores, empresas e consumidores. Atendimento em Adrianópolis (Manaus) e on-line.",
     url: SITE_URL,
     siteName: "Juliana Rodrigues - Advocacia Trabalhista",
     images: [
@@ -139,21 +146,16 @@ export default function RootLayout({
                   "@type": "WebSite",
                   "@id": `${SITE_URL}/#website`,
                   url: SITE_URL,
-                  name: "Juliana Rodrigues - Advocacia Trabalhista",
+                  name: "Juliana Rodrigues - Advocacia",
                   description:
-                    "Advogada trabalhista em Manaus com atendimento na OAB e online para todo o Brasil. Especialista em direitos trabalhistas, rescisões e ações judiciais.",
+                    "Advogada em Manaus com atuação em Direito do Trabalho e Direito do Consumidor. Atendimento presencial em Adrianópolis e on-line para todo o Brasil.",
                   inLanguage: "pt-BR",
-                  // potentialAction: {
-                  //   "@type": "SearchAction",
-                  //   target: `${SITE_URL}/?s={search_term_string}`,
-                  //   "query-input": "required name=search_term_string",
-                  // },
                 },
                 {
                   "@type": "WebPage",
                   "@id": `${SITE_URL}/#webpage`,
                   url: SITE_URL,
-                  name: "Juliana Rodrigues - Advogada Trabalhista em Manaus",
+                  name: "Juliana Rodrigues - Advogada Trabalhista e do Consumidor em Manaus",
                   isPartOf: { "@id": `${SITE_URL}/#website` },
                   primaryImageOfPage: {
                     "@id": `${SITE_URL}/images/dra-juliana-rodrigues-advogada-trabalhista-manaus.jpg`,
@@ -164,7 +166,9 @@ export default function RootLayout({
                 {
                   "@type": "LegalService",
                   "@id": `${SITE_URL}/#legalservice`,
-                  name: "Juliana Rodrigues - Advocacia Trabalhista",
+                  name: "Juliana Rodrigues - Advocacia",
+                  description:
+                    "Advocacia em Direito do Trabalho e Direito do Consumidor em Manaus, com atendimento presencial e on-line.",
                   image: `${SITE_URL}/images/dra-juliana-rodrigues-advogada-trabalhista-manaus.jpg`,
                   address: {
                     "@type": "PostalAddress",
@@ -174,15 +178,61 @@ export default function RootLayout({
                     postalCode: "69057-040",
                     addressCountry: "BR",
                   },
+                  geo: {
+                    "@type": "GeoCoordinates",
+                    latitude: -3.1079797,
+                    longitude: -60.0147917,
+                  },
                   telephone: "+55 92 98230-1415",
+                  email: "julianasouzarodrigues.adv@gmail.com",
                   priceRange: "Sob consulta",
                   url: SITE_URL,
+                  areaServed: [
+                    { "@type": "City", name: "Manaus" },
+                    { "@type": "State", name: "Amazonas" },
+                    { "@type": "Country", name: "Brasil" },
+                  ],
+                  serviceType: [
+                    "Direito do Trabalho",
+                    "Direito do Consumidor",
+                  ],
+                  knowsAbout: [
+                    "Rescisão indireta",
+                    "Justa causa",
+                    "Reintegração no emprego",
+                    "Horas extras",
+                    "Insalubridade e periculosidade",
+                    "Acidente de trabalho",
+                    "Negativa de plano de saúde",
+                    "Descontos indevidos no INSS",
+                    "Atraso e cancelamento de voo",
+                    "Cobranças abusivas",
+                  ],
+                  openingHoursSpecification: {
+                    "@type": "OpeningHoursSpecification",
+                    dayOfWeek: [
+                      "Monday",
+                      "Tuesday",
+                      "Wednesday",
+                      "Thursday",
+                      "Friday",
+                      "Saturday",
+                    ],
+                    opens: "08:00",
+                    closes: "18:00",
+                  },
+                  sameAs: [
+                    "https://www.instagram.com/julianarodrigues.advogada",
+                    "https://www.facebook.com/profile.php?id=61552505172203",
+                  ],
                 },
                 {
                   "@type": "Person",
                   "@id": `${SITE_URL}/#juliana`,
                   name: "Juliana Rodrigues",
-                  jobTitle: "Advogada Trabalhista",
+                  jobTitle: "Advogada",
+                  description:
+                    "Advogada inscrita na OAB-AM nº 10547, com atuação em Direito do Trabalho e Direito do Consumidor.",
                   image: `${SITE_URL}/images/dra-juliana-rodrigues-advogada-trabalhista-manaus.jpg`,
                   worksFor: {
                     "@id": `${SITE_URL}/#legalservice`,
@@ -191,9 +241,14 @@ export default function RootLayout({
                     "@type": "CollegeOrUniversity",
                     name: "UniNorte",
                   },
+                  knowsAbout: [
+                    "Direito do Trabalho",
+                    "Direito do Consumidor",
+                  ],
                   sameAs: [
                     "https://wa.me/5592982301415",
                     "https://www.instagram.com/julianarodrigues.advogada",
+                    "https://www.facebook.com/profile.php?id=61552505172203",
                   ],
                 },
                 {
@@ -215,14 +270,20 @@ export default function RootLayout({
                     {
                       "@type": "ListItem",
                       position: 3,
-                      name: "Localização",
-                      item: `${SITE_URL}/#localizacao`,
+                      name: "Áreas",
+                      item: `${SITE_URL}/#areas`,
                     },
                     {
                       "@type": "ListItem",
                       position: 4,
                       name: "Contato",
                       item: `${SITE_URL}/#contato`,
+                    },
+                    {
+                      "@type": "ListItem",
+                      position: 5,
+                      name: "Localização",
+                      item: `${SITE_URL}/#localizacao`,
                     },
                   ],
                 },

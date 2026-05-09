@@ -1,4 +1,6 @@
 import { About as AboutSection } from "@/sections/About/about";
+import { AreasDeAtuacao as AreasSection } from "@/sections/AreasDeAtuacao";
+import { BlogRecente as BlogRecenteSection } from "@/sections/BlogRecente";
 import { Hero as HeroSection } from "@/sections/Hero/hero";
 import { OfficeMap as OfficeMapSection } from "@/sections/OfficeMap/officeMap";
 import { Contact as ContactSection } from "@/sections/Contact";
@@ -9,14 +11,15 @@ import { Navbar } from "@/components/Navbar";
 export default function Home() {
   return (
     <>
-      {/* Links internos via âncoras - ajudam na navegação e no SEO */}
       <Navbar />
       <div className="pt-14 md:pt-16">
         <HeroSection />
         <AboutSection />
-        <OfficeMapSection />
-        <ContactSection />
+        <AreasSection />
+        <BlogRecenteSection />
         <FaqSection />
+        <ContactSection />
+        <OfficeMapSection />
         <FooterSection />
       </div>
     </>

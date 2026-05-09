@@ -27,8 +27,8 @@ export function Footer() {
         <div>
           <h3 className="text-xl font-bold mb-4">Dra. Juliana Rodrigues</h3>
           <p className="text-sm leading-relaxed">
-            Advogada Trabalhista / consumidor em Manaus com atendimento
-            presencial e online para todo o Brasil.
+            Advocacia em Direito do Trabalho e Direito do Consumidor em Manaus,
+            com atendimento presencial e on-line para todo o Brasil.
           </p>
 
           <div className="mt-4 space-y-3 text-sm">
@@ -137,7 +137,7 @@ export function Footer() {
 
       <div className="mt-10 border-t border-white/30 pt-4 text-center text-sm flex justify-center items-center gap-2">
         <Copyright className="w-4 h-4" />
-        2025 Dra. Juliana Rodrigues. Todos os direitos reservados.
+        {new Date().getFullYear()} Dra. Juliana Rodrigues. Todos os direitos reservados.
       </div>
     </footer>
   );

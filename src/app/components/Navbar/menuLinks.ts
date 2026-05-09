@@ -12,13 +12,15 @@ import {
   Plane,
   HeartPulse,
   Trophy,
+  Scale,
 } from "lucide-react";
 
 export const menuLinks = [
   { label: "Home", href: "/#home", icon: Home },
   { label: "Sobre", href: "/#sobre", icon: User },
-  { label: "Localização", href: "/#localizacao", icon: MapPin },
+  { label: "Áreas", href: "/#areas", icon: Scale },
   { label: "Contato", href: "/#contato", icon: Mail },
+  { label: "Localização", href: "/#localizacao", icon: MapPin },
   {
     label: "Blog",
     href: "#",
