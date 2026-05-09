@@ -49,6 +49,7 @@ const LAST_MOD: Record<string, string> = {
   "/blog/rescisao-indireta/": "2025-03-29",
   "/blog/overbooking/": "2026-04-27",
   "/blog/plano-de-saude-negou-exame/": "2026-04-29",
+  "/blog/casos-de-sucesso-direito-consumidor-manaus/": "2026-05-09",
   "/politica-de-privacidade/": "2025-01-01",
   "/termos-de-uso/": "2025-01-01",
 };

@@ -11,6 +11,7 @@ import {
   Newspaper,
   Plane,
   HeartPulse,
+  Trophy,
 } from "lucide-react";
 
 export const menuLinks = [
@@ -52,6 +53,11 @@ export const menuLinks = [
         label: "Plano de Saúde",
         href: "/blog/plano-de-saude-negou-exame/",
         icon: HeartPulse,
+      },
+      {
+        label: "Casos de Sucesso",
+        href: "/blog/casos-de-sucesso-direito-consumidor-manaus/",
+        icon: Trophy,
       },
     ],
   },
