@@ -9,6 +9,7 @@ export const post = {
   thumbnail: "/images/blog/overbooking.jpg",
   alt: "Passageiro impedido de embarcar por overbooking em aeroporto",
   date: "27 de Abril, 2026",
+  time: "09:00",
 };
 
 export const generateMetadata = async (): Promise<Metadata> => {

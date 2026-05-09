@@ -9,6 +9,7 @@ export const post = {
   thumbnail: "/images/blog/plano-de-saude-negou-exame.jpg",
   alt: "Paciente aguardando autorização de plano de saúde para exame urgente",
   date: "27 de Abril, 2026",
+  time: "10:00",
 };
 
 export const generateMetadata = async (): Promise<Metadata> => {

@@ -15,7 +15,8 @@ export default function PlanoSaudeNegouExamePage() {
       <h1 className="text-3xl sm:text-4xl font-bold mb-2">{post.title}</h1>
 
       <p className="text-sm text-gray-500 mb-6">
-        Publicado em {post.date} por{" "}
+        Publicado em {post.date}
+        {post.time ? ` às ${post.time}` : ""} por{" "}
         <span className="font-medium">Juliana Rodrigues</span>
       </p>
 

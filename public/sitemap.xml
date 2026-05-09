@@ -1,30 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://julianarodriguesadv.com.br/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://julianarodriguesadv.com.br/blog/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://julianarodriguesadv.com.br/blog/justa-causa/</loc>
+    <lastmod>2025-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://julianarodriguesadv.com.br/blog/overbooking/</loc>
+    <lastmod>2026-04-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://julianarodriguesadv.com.br/blog/plano-de-saude-negou-exame/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://julianarodriguesadv.com.br/blog/reintegracao-no-emprego/</loc>
+    <lastmod>2025-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://julianarodriguesadv.com.br/blog/rescisao-indireta/</loc>
-  </url>
-  <url>
-    <loc>https://julianarodriguesadv.com.br/</loc>
+    <lastmod>2025-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://julianarodriguesadv.com.br/politica-de-privacidade/</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://julianarodriguesadv.com.br/termos-de-uso/</loc>
-  </url>
-  <url>
-    <loc>https://julianarodriguesadv.com.br/favicon.ico</loc>
-  </url>
-  <url>
-    <loc>https://julianarodriguesadv.com.br/favicon-32x32.png</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>

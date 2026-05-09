@@ -162,6 +162,14 @@ export default function ReintegracaoNoEmpregoPage() {
             </Link>
           </li>
           <li>
+            <Link
+              href="/blog/plano-de-saude-negou-exame/"
+              className="text-blue-600 hover:underline"
+            >
+              Plano de saúde negou exame urgente? Saiba seus direitos
+            </Link>
+          </li>
+          <li>
             <Link href="/blog/" className="text-blue-600 hover:underline">
               Todos os artigos do blog
             </Link>

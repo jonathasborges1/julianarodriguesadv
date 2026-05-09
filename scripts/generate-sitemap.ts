@@ -3,7 +3,10 @@ import path from "path";
 
 const DOMAIN = "https://julianarodriguesadv.com.br";
 const DIST_DIR = path.join(__dirname, "..", "out");
-const OUTPUT_FILE = path.join(__dirname, "..", "public", "sitemap.xml");
+const OUTPUT_FILES = [
+  path.join(__dirname, "..", "public", "sitemap.xml"),
+  path.join(DIST_DIR, "sitemap.xml"),
+];
 
 // Arquivos e diretórios que nunca devem aparecer no sitemap
 const IGNORE_NAMES = new Set([
@@ -114,9 +117,11 @@ function buildSitemap(routes: string[]): string {
 const routes = collectRoutes(DIST_DIR);
 const sitemap = buildSitemap(routes);
 
-const dir = path.dirname(OUTPUT_FILE);
-if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-fs.writeFileSync(OUTPUT_FILE, sitemap, "utf-8");
+for (const outputFile of OUTPUT_FILES) {
+  const dir = path.dirname(outputFile);
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+  fs.writeFileSync(outputFile, sitemap, "utf-8");
+}
 
 console.log(`Sitemap gerado: ${routes.length} URLs`);
 routes.forEach((r) => console.log(` → ${DOMAIN}${r}`));

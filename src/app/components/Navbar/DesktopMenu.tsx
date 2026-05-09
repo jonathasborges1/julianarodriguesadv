@@ -66,18 +66,20 @@ export function DesktopMenu() {
             {openIndex === index && (
               <div
                 id={`dropdown-${index}`}
-                className="absolute left-0 mt-2 w-56 rounded-lg bg-white shadow-lg z-50 p-1 flex flex-col border border-gray-100"
+                className="absolute left-0 top-full z-50 w-56 pt-2"
               >
-                {children.map(({ href, label }) => (
-                  <Link
-                    key={href}
-                    href={href}
-                    onClick={handleLinkClick}
-                    className="px-4 py-2.5 text-sm text-gray-700 hover:bg-[#00274B]/5 hover:text-[#00274B] rounded-md transition"
-                  >
-                    {label}
-                  </Link>
-                ))}
+                <div className="rounded-lg bg-white shadow-lg p-1 flex flex-col border border-gray-100">
+                  {children.map(({ href, label }) => (
+                    <Link
+                      key={href}
+                      href={href}
+                      onClick={handleLinkClick}
+                      className="px-4 py-2.5 text-sm text-gray-700 hover:bg-[#00274B]/5 hover:text-[#00274B] rounded-md transition"
+                    >
+                      {label}
+                    </Link>
+                  ))}
+                </div>
               </div>
             )}
           </div>

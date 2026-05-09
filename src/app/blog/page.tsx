@@ -42,6 +42,7 @@ interface PostMeta {
   excerpt: string;
   thumbnail: string;
   date: string;
+  time?: string;
 }
 
 const monthNumbers: Record<string, number> = {
@@ -94,12 +95,13 @@ async function loadBlogPosts(): Promise<PostMeta[]> {
   }
 
   return posts.sort(
-    (a, b) => parsePostDate(b.date).getTime() - parsePostDate(a.date).getTime()
+    (a, b) =>
+      parsePostPublishedAt(b).getTime() - parsePostPublishedAt(a).getTime()
   );
 }
 
-function parsePostDate(date: string): Date {
-  const normalized = date
+function parsePostPublishedAt(post: Pick<PostMeta, "date" | "time">): Date {
+  const normalized = post.date
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
@@ -114,10 +116,13 @@ function parsePostDate(date: string): Date {
 
   const [, day, monthName, year] = match;
   const month = monthNumbers[monthName];
+  const timeMatch = post.time?.match(/^(\d{2}):(\d{2})$/);
+  const hours = timeMatch ? Number(timeMatch[1]) : 0;
+  const minutes = timeMatch ? Number(timeMatch[2]) : 0;
 
   if (month === undefined) {
     return new Date(0);
   }
 
-  return new Date(Number(year), month, Number(day));
+  return new Date(Number(year), month, Number(day), hours, minutes);
 }
