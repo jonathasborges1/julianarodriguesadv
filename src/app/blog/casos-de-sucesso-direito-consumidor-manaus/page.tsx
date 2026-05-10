@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { SocialShare } from "@/components/SocialShare";
 import { SITE_URL, canonicalUrl } from "@/lib/config";
+import { buildArticleWhatsAppUrl } from "../whatsapp";
 import { generateMetadata, post } from "./metadata";
 
 export { generateMetadata };
@@ -110,6 +111,9 @@ const jsonLd = {
 
 export default function CasosSucessoDireitoConsumidorManausPage() {
   const publishedLabel = post.time ? `${post.date} às ${post.time}` : post.date;
+  const whatsappUrl = buildArticleWhatsAppUrl(
+    "casos de sucesso em Direito do Consumidor em Manaus"
+  );
 
   return (
     <article className="max-w-4xl mx-auto px-4 py-10 text-gray-800">
@@ -389,8 +393,10 @@ export default function CasosSucessoDireitoConsumidorManausPage() {
           provas disponíveis e das circunstâncias concretas.
         </p>
         <Link
-          href="/#contato"
+          href={whatsappUrl}
           className="inline-block bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Agendar análise do caso
         </Link>
