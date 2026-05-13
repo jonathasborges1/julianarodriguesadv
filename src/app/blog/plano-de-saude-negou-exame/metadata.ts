@@ -3,10 +3,10 @@ import { SITE_URL, canonicalUrl } from "@/lib/config";
 
 export const post = {
   slug: "plano-de-saude-negou-exame",
-  title: "Plano de Saúde Negou Exame Urgente? Saiba Quando Isso Gera Indenização",
+  title: "Plano Negou Exame Urgente? Quando Cabe Indenização",
   excerpt:
-    "O silêncio do plano de saúde pode ser tão ilegal quanto uma negativa formal. Entenda quando a demora ou falta de resposta gera direito à indenização por danos morais.",
-  thumbnail: "/images/blog/plano-de-saude-negou-exame.jpg",
+    "Omissão do plano de saúde pode gerar indenização. Entenda quando a demora ou falta de resposta viola seus direitos em Manaus.",
+  thumbnail: "/images/blog/plano-de-saude-negou-exame.webp",
   alt: "Paciente aguardando autorização de plano de saúde para exame urgente",
   date: "27 de Abril, 2026",
   time: "10:00",

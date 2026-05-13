@@ -3,15 +3,23 @@
 import Link from "next/link";
 import Image from "next/image";
 import { SocialShare } from "@/components/SocialShare";
+import { buildArticleJsonLd } from "@/lib/articleSchema";
 import { buildArticleWhatsAppUrl } from "../whatsapp";
 import { generateMetadata, post } from "./metadata";
 export { generateMetadata };
+
+const articleJsonLd = buildArticleJsonLd(post);
 
 export default function JustaCausaPage() {
   const whatsappUrl = buildArticleWhatsAppUrl("demissão por justa causa");
 
   return (
     <article className="max-w-4xl mx-auto px-4 py-10 text-gray-800">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+
       <h1 className="text-3xl sm:text-4xl font-bold mb-2">{post.title}</h1>
 
       <p className="text-sm text-gray-500 mb-6">

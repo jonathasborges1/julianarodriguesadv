@@ -24,7 +24,7 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/#home" className="flex items-center gap-2">
           <Image
-            src="/images/logotipo-dra-juliana-2.png"
+            src="/images/logotipo-dra-juliana-2.webp"
             alt="Logo Dra. Juliana"
             width={40}
             height={40}

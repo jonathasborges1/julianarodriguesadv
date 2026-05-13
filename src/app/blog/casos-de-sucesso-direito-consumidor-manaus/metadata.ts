@@ -4,10 +4,10 @@ import { SITE_URL, canonicalUrl } from "@/lib/config";
 export const post = {
   slug: "casos-de-sucesso-direito-consumidor-manaus",
   title:
-    "Casos de Sucesso em Direito do Consumidor em Manaus: Cobranças Indevidas, Reembolso e Plano de Saúde",
+    "Casos de Sucesso no Direito do Consumidor em Manaus",
   excerpt:
-    "Conheça casos reais de Direito do Consumidor envolvendo cobrança indevida de água, passagens não reembolsadas, cobrança abusiva de energia e negativa de exame por plano de saúde.",
-  thumbnail: "/images/blog/casos-de-sucesso-direito-consumidor-manaus.png",
+    "Casos reais de cobrança indevida, reembolso negado e plano de saúde em Manaus. Veja quando buscar indenização.",
+  thumbnail: "/images/blog/casos-de-sucesso-direito-consumidor-manaus.webp",
   alt: "Casos de sucesso em Direito do Consumidor em Manaus com destaque jurídico premium",
   date: "9 de Maio, 2026",
   time: "15:30",

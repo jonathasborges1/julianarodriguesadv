@@ -7,8 +7,6 @@ import { Montserrat } from "next/font/google";
 import { SITE_URL } from "@/lib/config";
 import ThemeRegistry from "@/lib/ThemeRegistry";
 
-import { LoadingApp } from "@/components/LoadingApp";
-
 import { VersionLogger } from "@/components/VersionLogger/VersionLogger";
 import { NotistackProvider } from "@/providers/SnackbarProvider";
 
@@ -152,18 +150,6 @@ export default function RootLayout({
                   inLanguage: "pt-BR",
                 },
                 {
-                  "@type": "WebPage",
-                  "@id": `${SITE_URL}/#webpage`,
-                  url: SITE_URL,
-                  name: "Juliana Rodrigues - Advogada Trabalhista e do Consumidor em Manaus",
-                  isPartOf: { "@id": `${SITE_URL}/#website` },
-                  primaryImageOfPage: {
-                    "@id": `${SITE_URL}/images/dra-juliana-rodrigues-advogada-trabalhista-manaus.jpg`,
-                  },
-                  breadcrumb: { "@id": `${SITE_URL}/#breadcrumb` },
-                  inLanguage: "pt-BR",
-                },
-                {
                   "@type": "LegalService",
                   "@id": `${SITE_URL}/#legalservice`,
                   name: "Juliana Rodrigues - Advocacia",
@@ -251,42 +237,6 @@ export default function RootLayout({
                     "https://www.facebook.com/profile.php?id=61552505172203",
                   ],
                 },
-                {
-                  "@type": "BreadcrumbList",
-                  "@id": `${SITE_URL}/#breadcrumb`,
-                  itemListElement: [
-                    {
-                      "@type": "ListItem",
-                      position: 1,
-                      name: "Home",
-                      item: `${SITE_URL}/`,
-                    },
-                    {
-                      "@type": "ListItem",
-                      position: 2,
-                      name: "Sobre",
-                      item: `${SITE_URL}/#sobre`,
-                    },
-                    {
-                      "@type": "ListItem",
-                      position: 3,
-                      name: "Áreas",
-                      item: `${SITE_URL}/#areas`,
-                    },
-                    {
-                      "@type": "ListItem",
-                      position: 4,
-                      name: "Contato",
-                      item: `${SITE_URL}/#contato`,
-                    },
-                    {
-                      "@type": "ListItem",
-                      position: 5,
-                      name: "Localização",
-                      item: `${SITE_URL}/#localizacao`,
-                    },
-                  ],
-                },
               ],
             }),
           }}
@@ -295,7 +245,6 @@ export default function RootLayout({
         <NotistackProvider>
           <ThemeRegistry>
             <VersionLogger />
-            <LoadingApp />
             {children}
           </ThemeRegistry>
         </NotistackProvider>

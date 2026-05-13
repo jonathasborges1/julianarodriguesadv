@@ -44,12 +44,12 @@ const IGNORE_EXTENSIONS = new Set([
 const LAST_MOD: Record<string, string> = {
   "/": "2026-04-29",
   "/blog/": "2026-04-29",
-  "/blog/justa-causa/": "2025-03-28",
-  "/blog/reintegracao-no-emprego/": "2025-03-12",
-  "/blog/rescisao-indireta/": "2025-03-29",
-  "/blog/overbooking/": "2026-04-27",
-  "/blog/plano-de-saude-negou-exame/": "2026-04-29",
-  "/blog/casos-de-sucesso-direito-consumidor-manaus/": "2026-05-09",
+  "/blog/justa-causa/": "2026-05-13",
+  "/blog/reintegracao-no-emprego/": "2026-05-13",
+  "/blog/rescisao-indireta/": "2026-05-13",
+  "/blog/overbooking/": "2026-05-13",
+  "/blog/plano-de-saude-negou-exame/": "2026-05-13",
+  "/blog/casos-de-sucesso-direito-consumidor-manaus/": "2026-05-13",
   "/politica-de-privacidade/": "2025-01-01",
   "/termos-de-uso/": "2025-01-01",
 };

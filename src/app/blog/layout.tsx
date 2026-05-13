@@ -1,5 +1,3 @@
-"use client";
-
 import type { ReactNode } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/sections/Footer";

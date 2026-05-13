@@ -17,12 +17,12 @@ export const Hero = () => {
         style={{ border: "0px solid red" }}
       >
         <Image
-          src="/images/logotipo-dra-juliana.png"
+          src="/images/logotipo-dra-juliana.webp"
           alt="Dra. Juliana Rodrigues - Advogada Trabalhista em Manaus"
           width={150}
           height={150}
           sizes="(max-width: 768px) 100px, 200px"
-          quality={100}
+          quality={90}
           className="rounded-xl shadow-lg"
           priority
         />

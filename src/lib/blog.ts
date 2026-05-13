@@ -55,7 +55,7 @@ export function parsePostPublishedAt(
 ): Date {
   const normalized = post.date
     .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "")
+    .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
     .replace(",", "")
     .trim();

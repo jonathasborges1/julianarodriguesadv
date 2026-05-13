@@ -6,7 +6,7 @@ export const post = {
   title: "Overbooking: O que é, Seus Direitos e Como Ser Indenizado",
   excerpt:
     "Sofreu overbooking em voo ou hotel? Entenda o que a lei garante, quais indenizações você pode receber e como agir para não perder seus direitos.",
-  thumbnail: "/images/blog/overbooking.jpg",
+  thumbnail: "/images/blog/overbooking.webp",
   alt: "Passageiro impedido de embarcar por overbooking em aeroporto",
   date: "27 de Abril, 2026",
   time: "09:00",

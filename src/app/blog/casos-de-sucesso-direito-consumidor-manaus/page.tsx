@@ -32,6 +32,10 @@ const jsonLd = {
         "@id": `${SITE_URL}/#rodrigues-castro-advocacia`,
         name: "Rodrigues e Castro Advocacia",
         url: SITE_URL,
+        logo: {
+          "@type": "ImageObject",
+          url: `${SITE_URL}/images/logotipo-dra-juliana-2.webp`,
+        },
         areaServed: [
           {
             "@type": "City",
@@ -106,6 +110,30 @@ const jsonLd = {
         },
       ],
     },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${articleUrl}#breadcrumb`,
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: `${SITE_URL}/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Blog",
+          item: canonicalUrl("/blog"),
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: post.title,
+          item: articleUrl,
+        },
+      ],
+    },
   ],
 };
 
@@ -123,8 +151,7 @@ export default function CasosSucessoDireitoConsumidorManausPage() {
       />
 
       <h1 className="text-3xl sm:text-4xl font-bold mb-3 text-[#00274B]">
-        Casos de Sucesso em Direito do Consumidor em Manaus: cobranças indevidas,
-        reembolso e plano de saúde
+        {post.title}
       </h1>
 
       <p className="text-sm text-gray-500 mb-6">
