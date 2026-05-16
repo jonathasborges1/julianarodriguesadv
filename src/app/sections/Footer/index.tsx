@@ -135,9 +135,31 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="mt-10 border-t border-white/30 pt-4 text-center text-sm flex justify-center items-center gap-2">
-        <Copyright className="w-4 h-4" />
-        {new Date().getFullYear()} Dra. Juliana Rodrigues. Todos os direitos reservados.
+      <div className="mt-10 border-t border-white/30 pt-4 text-center text-sm flex flex-col items-center gap-2">
+        <p className="flex justify-center items-center gap-2">
+          <Copyright className="w-4 h-4" />
+          {new Date().getFullYear()} Dra. Juliana Rodrigues. Todos os direitos reservados.
+        </p>
+        <p className="text-xs text-white/70">
+          Desenvolvido por{" "}
+          <a
+            href="https://lumasites.com.br"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white hover:underline"
+          >
+            LumaSites
+          </a>{" "}
+          &middot;{" "}
+          <a
+            href="https://github.com/jonathasborges1/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white hover:underline"
+          >
+            Jonathas Borges
+          </a>
+        </p>
       </div>
     </footer>
   );
